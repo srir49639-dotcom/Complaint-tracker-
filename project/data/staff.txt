@@ -1,0 +1,21 @@
+#StaffID	Name	DepartmentID	Email	Phone	Specialization	Capacity	Workload	Efficiency
+STF-101	Rajesh Kumar	DEPT-IT	rajesh.it@university.edu	9811100001	Network Troubleshooting & Wi-Fi	6	2	1.2
+STF-102	Priya Nair	DEPT-IT	priya.it@university.edu	9811100002	Server & Portal Support	5	1	1.1
+STF-103	Ramesh Patel	DEPT-ELEC	ramesh.elec@university.edu	9811100003	High Voltage & Power Backups	7	3	1.3
+STF-104	Suresh Gupta	DEPT-ELEC	suresh.elec@university.edu	9811100004	Lighting & Appliance Repairs	6	2	1.0
+STF-105	Sunil Yadav	DEPT-WATR	sunil.water@university.edu	9811100005	Pipeline & Water Supply	6	1	1.15
+STF-106	Mahesh Shinde	DEPT-WATR	mahesh.water@university.edu	9811100006	Drainage & Bathroom Plumbing	5	2	1.0
+STF-107	Anita Roy	DEPT-HOST	anita.hostel@university.edu	9811100007	Hostel Warden - Block A/B	8	4	1.25
+STF-108	Vikas Deshmukh	DEPT-HOST	vikas.hostel@university.edu	9811100008	Hostel Warden - Block C/D	8	3	1.2
+STF-109	Vikram Rathore	DEPT-SECU	vikram.sec@university.edu	9811100009	Night Patrol & Gate Security	6	1	1.0
+STF-110	Deepak Joshi	DEPT-MESS	deepak.mess@university.edu	9811100010	Food Quality Inspection	5	1	1.1
+STF-111	Kavita Rao	DEPT-FINA	kavita.fin@university.edu	9811100011	Fee Payment & Refund Desk	6	2	1.2
+STF-112	Manoj Tiwari	DEPT-ESTA	manoj.infra@university.edu	9811100012	Carpentry & Civil Maintenance	7	2	1.05
+STF-101	david_it	870583f9f02abfcdf2ca89d54e46bf63950337a645172974376ffb4556eb86e4	David Kumar	david@smarttracker.org	+1-555-0101	DPT-02	Internet / Wi-Fi	Network Routing & Switches	AVAILABLE	2	8	4.8	STAFF
+STF-102	marcus_elec	870583f9f02abfcdf2ca89d54e46bf63950337a645172974376ffb4556eb86e4	Marcus Vance	marcus@smarttracker.org	+1-555-0102	DPT-03	Electricity / Power	High Voltage & Backup Generators	AVAILABLE	3	8	4.7	STAFF
+STF-103	walter_plumb	870583f9f02abfcdf2ca89d54e46bf63950337a645172974376ffb4556eb86e4	Walter White	walter@smarttracker.org	+1-555-0103	DPT-04	Water & Plumbing	Pipe Leakage & Drainage	AVAILABLE	1	8	4.9	STAFF
+STF-104	sarah_hostel	870583f9f02abfcdf2ca89d54e46bf63950337a645172974376ffb4556eb86e4	Sarah Jenkins	sarah@smarttracker.org	+1-555-0104	DPT-05	Hostel Facilities	Room Allotment & Infrastructure	AVAILABLE	4	8	4.6	STAFF
+STF-105	elena_lib	870583f9f02abfcdf2ca89d54e46bf63950337a645172974376ffb4556eb86e4	Elena Rostova	elena@smarttracker.org	+1-555-0105	DPT-10	Library Services	Digital Repository & Book Loans	AVAILABLE	1	6	4.9	STAFF
+STF-106	anthony_food	870583f9f02abfcdf2ca89d54e46bf63950337a645172974376ffb4556eb86e4	Anthony Bourdain	anthony@smarttracker.org	+1-555-0106	DPT-11	Food Services / Canteen	Hygiene Inspection & Kitchen Ops	AVAILABLE	2	8	4.5	STAFF
+STF-107	brian_civil	870583f9f02abfcdf2ca89d54e46bf63950337a645172974376ffb4556eb86e4	Brian O'Connor	brian@smarttracker.org	+1-555-0107	DPT-12	Infrastructure & Maintenance	HVAC, Air Conditioning & Elevators	AVAILABLE	3	8	4.8	STAFF
+STF-108	rachel_fin	870583f9f02abfcdf2ca89d54e46bf63950337a645172974376ffb4556eb86e4	Rachel Green	rachel@smarttracker.org	+1-555-0108	DPT-07	Finance & Fees	Fee Reconciliation & Refunds	AVAILABLE	2	6	4.7	STAFF

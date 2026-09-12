@@ -1,0 +1,1311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ROCV-AI 2026 - Robotics, Communication, VLSI, and Artificial Intelligence</title>
+<meta name="description" content="International Conference on Emerging Trends in Robotics, Communication, VLSI, and Artificial Intelligence (ROCV-AI 2026) - May 15-16, 2026 at KLEF Bowrampet Campus, Hyderabad">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0a1729;
+  --deep:#12294a;
+  --deep-2:#1b3a63;
+  --gold:#e0a419;
+  --gold-soft:#f6c65b;
+  --sky:#2b7fc4;
+  --paper:#f6f8fb;
+  --white:#ffffff;
+  --line:#dfe6ef;
+  --text:#1f2a3a;
+  --muted:#5b6b7f;
+  --radius:14px;
+  --maxw:1180px;
+  --shadow:0 10px 30px rgba(10,23,41,.08);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;font-family:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;
+  color:var(--text);background:var(--white);line-height:1.65;font-size:16px;
+}
+h1,h2,h3,h4,h5{font-family:'Sora','Segoe UI',system-ui,sans-serif;line-height:1.2;margin:0 0 .5em;color:var(--ink);font-weight:700}
+h1{font-size:clamp(2rem,5vw,3.2rem)}
+h2{font-size:clamp(1.5rem,3.2vw,2.25rem)}
+h3{font-size:1.25rem}
+h4{font-size:1.05rem}
+p{margin:0 0 1rem}
+a{color:var(--sky);text-decoration:none}
+a:hover{text-decoration:underline}
+img{max-width:100%;display:block}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px;border-radius:4px}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 20px}
+.section{padding:72px 0}
+.section.alt{background:var(--paper)}
+.eyebrow{font-family:'Sora','Segoe UI',system-ui,sans-serif;font-size:.82rem;font-weight:600;color:var(--gold);letter-spacing:.08em;margin-bottom:.5rem}
+.lead{font-size:1.05rem;color:var(--muted);max-width:70ch}
+.center{text-align:center}
+.center .lead{margin-left:auto;margin-right:auto}
+
+/* ---------- header ---------- */
+header.site{position:sticky;top:0;z-index:60;background:rgba(10,23,41,.97);backdrop-filter:blur(8px);border-bottom:1px solid rgba(255,255,255,.08)}
+.navbar{display:flex;align-items:center;justify-content:space-between;gap:16px;max-width:var(--maxw);margin:0 auto;padding:12px 20px}
+.brand{font-family:'Sora','Segoe UI',system-ui,sans-serif;font-weight:800;font-size:1.15rem;color:#fff;letter-spacing:.02em}
+.brand:hover{text-decoration:none;color:var(--gold-soft)}
+.brand small{display:block;font-family:'Inter';font-size:.66rem;font-weight:500;color:#93a7c0;letter-spacing:.04em}
+.nav{display:flex;gap:2px;flex-wrap:wrap}
+.nav a{color:#cfdcec;font-size:.88rem;font-weight:500;padding:8px 11px;border-radius:8px}
+.nav a:hover{background:rgba(255,255,255,.09);color:#fff;text-decoration:none}
+.nav a.active{color:var(--ink);background:var(--gold);font-weight:600}
+.burger{display:none;background:none;border:1px solid rgba(255,255,255,.25);color:#fff;border-radius:8px;padding:7px 11px;font-size:1.1rem;cursor:pointer}
+
+/* ---------- hero ---------- */
+.hero{position:relative;background:linear-gradient(135deg,var(--ink) 0%,var(--deep) 55%,var(--deep-2) 100%);color:#fff;overflow:hidden;padding:88px 0 76px}
+.hero:before{content:"";position:absolute;inset:0;background:
+  radial-gradient(circle at 82% 18%,rgba(224,164,25,.20),transparent 45%),
+  radial-gradient(circle at 12% 88%,rgba(43,127,196,.28),transparent 48%);}
+.hero .wrap{position:relative}
+.hero h1{color:#fff;font-size:clamp(2.4rem,6.5vw,4.1rem);font-weight:800;letter-spacing:-.02em;margin-bottom:.35em}
+.hero .eyebrow{color:var(--gold-soft)}
+.hero-sub{font-size:clamp(1rem,2vw,1.3rem);color:#d3e0ef;max-width:44ch;margin-bottom:2rem}
+.hero-facts{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:2rem}
+.fact{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);border-radius:12px;padding:14px 20px;min-width:210px}
+.fact span{display:block;font-size:.74rem;color:#9fb4cc;font-weight:600;letter-spacing:.06em;margin-bottom:2px}
+.fact strong{font-family:'Sora','Segoe UI',system-ui,sans-serif;font-size:1.08rem;color:#fff;font-weight:600}
+.icon-strip{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:26px;opacity:.85}
+.icon-strip svg{width:32px;height:32px;color:var(--gold-soft);opacity:.85}
+[data-go]{cursor:pointer}
+a[data-go]{color:var(--sky)}
+a[data-go]:hover{text-decoration:underline}
+.nav a[data-go],.brand[data-go],.btn[data-go],.foot-links a[data-go]{text-decoration:none}
+.btn{display:inline-block;font-family:'Sora','Segoe UI',system-ui,sans-serif;font-weight:600;font-size:.95rem;padding:13px 26px;border-radius:10px;border:1.5px solid transparent;cursor:pointer;transition:transform .15s ease,background .15s ease}
+.btn:hover{text-decoration:none;transform:translateY(-1px)}
+.btn-gold{background:var(--gold);color:var(--ink)}
+.btn-gold:hover{background:var(--gold-soft);color:var(--ink)}
+.btn-ghost{border-color:rgba(255,255,255,.5);color:#fff}
+.btn-ghost:hover{background:rgba(255,255,255,.12);color:#fff}
+.btn-dark{background:var(--deep);color:#fff}
+.btn-dark:hover{background:var(--deep-2);color:#fff}
+.btn-row{display:flex;gap:14px;flex-wrap:wrap}
+
+/* ---------- page banner ---------- */
+.banner{background:linear-gradient(135deg,var(--ink),var(--deep-2));color:#fff;padding:60px 0 52px}
+.banner h1{color:#fff;margin-bottom:.25em}
+.banner p{color:#c9d8e9;max-width:70ch;margin:0}
+.banner .eyebrow{color:var(--gold-soft)}
+
+/* ---------- generic blocks ---------- */
+.grid{display:grid;gap:24px}
+.g2{grid-template-columns:repeat(2,1fr)}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g4{grid-template-columns:repeat(4,1fr)}
+.split{display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:center}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:26px;box-shadow:var(--shadow)}
+.card h3{margin-bottom:.4em}
+.card p:last-child{margin-bottom:0}
+.media{border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);position:relative}
+.media img{width:100%;height:100%;object-fit:cover;display:block}
+.media-cap{position:absolute;left:0;right:0;bottom:0;padding:22px;background:linear-gradient(transparent,rgba(10,23,41,.9));color:#fff}
+.media-cap h4{color:#fff;margin:0 0 2px}
+.media-cap span{font-size:.85rem;color:#cddaea}
+
+.topic-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
+.topic-card img{width:100%;height:168px;object-fit:cover}
+.topic-card .body{padding:20px}
+.topic-card h3{font-size:1.1rem}
+.topic-card p{margin:0;font-size:.93rem;color:var(--muted)}
+
+/* ---------- timeline / dates ---------- */
+.dates-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:20px}
+.date-card{background:#fff;border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:12px;padding:22px 24px;box-shadow:var(--shadow)}
+.date-card h4{margin:0 0 6px;font-size:1rem}
+.date-card .d{font-family:'Sora','Segoe UI',system-ui,sans-serif;font-size:1.35rem;font-weight:700;color:var(--deep);margin-bottom:8px}
+.pill{display:inline-block;font-size:.72rem;font-weight:700;padding:4px 10px;border-radius:999px;letter-spacing:.03em}
+.pill.active{background:#e5f5ec;color:#186c3c}
+.pill.scheduled{background:#e8f0fb;color:#1a4d8f}
+.pill.passed{background:#fdeceb;color:#a3271f}
+.notice{background:#fff8e6;border:1px solid #f2dda0;border-left:4px solid var(--gold);border-radius:12px;padding:20px 24px;margin-bottom:34px}
+.notice h4{margin-bottom:.3em}
+.notice p{margin:0;color:#6b5a2b}
+
+/* ---------- lists ---------- */
+ul.clean{list-style:none;padding:0;margin:0}
+ul.clean li{position:relative;padding:9px 0 9px 26px;border-bottom:1px solid var(--line)}
+ul.clean li:last-child{border-bottom:none}
+ul.clean li:before{content:"";position:absolute;left:4px;top:18px;width:8px;height:8px;border-radius:2px;background:var(--gold)}
+ol.steps{counter-reset:s;list-style:none;padding:0;margin:0}
+ol.steps li{counter-increment:s;position:relative;padding:10px 0 10px 46px}
+ol.steps li:before{content:counter(s);position:absolute;left:0;top:9px;width:30px;height:30px;border-radius:50%;background:var(--deep);color:#fff;font-family:'Sora';font-weight:700;font-size:.85rem;display:grid;place-items:center}
+
+/* ---------- tracks ---------- */
+.track{border:1px solid var(--line);border-radius:12px;margin-bottom:12px;background:#fff;overflow:hidden}
+.track button{width:100%;text-align:left;background:#fff;border:0;padding:16px 20px;font-family:'Sora';font-weight:600;font-size:1rem;color:var(--ink);cursor:pointer;display:flex;justify-content:space-between;gap:14px;align-items:center}
+.track button:hover{background:var(--paper)}
+.track .count{font-family:'Inter';font-size:.78rem;font-weight:600;color:var(--muted);background:var(--paper);border:1px solid var(--line);padding:3px 9px;border-radius:999px;white-space:nowrap}
+.track .panel{display:none;padding:0 20px 18px;border-top:1px solid var(--line)}
+.track.open .panel{display:block}
+.track.open button .chev{transform:rotate(180deg)}
+.chev{transition:transform .2s ease;color:var(--gold);font-size:.8rem}
+
+/* ---------- committee ---------- */
+.comm-group{margin-bottom:38px}
+.comm-group h3{display:flex;align-items:center;gap:12px;padding-bottom:10px;border-bottom:2px solid var(--gold)}
+.people{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px;margin-top:18px}
+.person{background:#fff;border:1px solid var(--line);border-radius:12px;padding:15px 18px}
+.person b{display:block;font-family:'Sora';font-size:.98rem;color:var(--ink)}
+.person span{font-size:.86rem;color:var(--muted)}
+
+/* ---------- fees ---------- */
+.fee-table{width:100%;border-collapse:collapse;margin-top:6px}
+.fee-table td{padding:11px 0;border-bottom:1px dashed var(--line);font-size:.95rem}
+.fee-table td:last-child{text-align:right;font-family:'Sora';font-weight:600;color:var(--deep);white-space:nowrap}
+.fee-table tr:last-child td{border-bottom:none}
+.badge{display:inline-block;background:var(--gold);color:var(--ink);font-size:.7rem;font-weight:700;padding:3px 10px;border-radius:999px;margin-left:8px;vertical-align:middle}
+.kv{display:flex;justify-content:space-between;gap:16px;padding:9px 0;border-bottom:1px dashed var(--line);font-size:.94rem}
+.kv:last-child{border-bottom:none}
+.kv b{font-family:'Sora';color:var(--deep)}
+.faq{border:1px solid var(--line);border-radius:12px;background:#fff;margin-bottom:10px;overflow:hidden}
+.faq button{width:100%;text-align:left;background:#fff;border:0;padding:16px 20px;font-family:'Sora';font-weight:600;font-size:.98rem;color:var(--ink);cursor:pointer;display:flex;justify-content:space-between;gap:12px}
+.faq .panel{display:none;padding:0 20px 16px;color:var(--muted);font-size:.94rem}
+.faq.open .panel{display:block}
+.faq.open .chev{transform:rotate(180deg)}
+.small-note{font-size:.86rem;color:var(--muted);margin:6px 0}
+
+/* ---------- footer ---------- */
+footer.site{background:var(--ink);color:#b9c9dc;padding:52px 0 26px;font-size:.92rem}
+footer.site h4{color:#fff;font-size:1rem;margin-bottom:.9em}
+footer.site a{color:#b9c9dc}
+footer.site a:hover{color:var(--gold-soft)}
+.foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1.2fr;gap:36px}
+.foot-links{list-style:none;padding:0;margin:0}
+.foot-links li{margin-bottom:7px}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.12);margin-top:34px;padding-top:20px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:.85rem;color:#8ba0b8}
+.edit-link{background:none;border:1px solid rgba(255,255,255,.22);color:#8ba0b8;font:inherit;font-size:.82rem;padding:5px 12px;border-radius:8px;cursor:pointer}
+.edit-link:hover{color:#fff;border-color:var(--gold)}
+
+/* ---------- admin ---------- */
+#admin{position:fixed;inset:0 0 0 auto;width:min(560px,100%);background:#fff;box-shadow:-14px 0 44px rgba(10,23,41,.25);z-index:200;display:none;flex-direction:column}
+#admin.open{display:flex}
+.adm-head{background:var(--ink);color:#fff;padding:16px 20px;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.adm-head h3{color:#fff;margin:0;font-size:1.05rem}
+.adm-head button{background:rgba(255,255,255,.12);border:0;color:#fff;font-size:1.1rem;width:32px;height:32px;border-radius:8px;cursor:pointer}
+.adm-tabs{display:flex;flex-wrap:wrap;gap:4px;padding:10px 14px;border-bottom:1px solid var(--line);background:var(--paper)}
+.adm-tabs button{background:#fff;border:1px solid var(--line);border-radius:999px;padding:5px 12px;font-size:.8rem;font-family:'Inter';cursor:pointer;color:var(--muted)}
+.adm-tabs button.on{background:var(--deep);border-color:var(--deep);color:#fff;font-weight:600}
+.adm-body{flex:1;overflow-y:auto;padding:18px 20px 40px}
+.adm-foot{border-top:1px solid var(--line);padding:12px 20px;display:flex;gap:10px;flex-wrap:wrap;align-items:center;background:var(--paper)}
+.fld{margin-bottom:16px}
+.fld label{display:block;font-size:.78rem;font-weight:700;color:var(--deep);margin-bottom:5px;font-family:'Sora'}
+.fld input,.fld textarea,.fld select{width:100%;padding:9px 11px;border:1px solid var(--line);border-radius:8px;font:inherit;font-size:.9rem;background:#fff;color:var(--text)}
+.fld textarea{min-height:82px;resize:vertical;line-height:1.5}
+.fld input:focus,.fld textarea:focus{border-color:var(--sky);outline:none;box-shadow:0 0 0 3px rgba(43,127,196,.15)}
+.rowbox{border:1px solid var(--line);border-radius:10px;padding:14px;margin-bottom:12px;background:var(--paper)}
+.rowbox .rh{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
+.rowbox .rh b{font-family:'Sora';font-size:.85rem;color:var(--deep)}
+.mini{background:#fff;border:1px solid var(--line);border-radius:7px;padding:3px 9px;font-size:.76rem;cursor:pointer;color:var(--muted);margin-left:4px}
+.mini:hover{border-color:var(--sky);color:var(--sky)}
+.mini.danger:hover{border-color:#c0392b;color:#c0392b}
+.adm-note{font-size:.82rem;color:var(--muted);background:#fff8e6;border:1px solid #f2dda0;border-radius:8px;padding:10px 12px;margin-bottom:16px}
+#admScrim{position:fixed;inset:0;background:rgba(10,23,41,.4);z-index:190;display:none}
+#admScrim.open{display:block}
+.toast{position:fixed;left:50%;bottom:26px;transform:translateX(-50%);background:var(--ink);color:#fff;padding:11px 20px;border-radius:10px;z-index:300;font-size:.9rem;display:none}
+.toast.show{display:block}
+
+@media(max-width:900px){
+  .split{grid-template-columns:1fr;gap:26px}
+  .g3,.g4{grid-template-columns:repeat(2,1fr)}
+  .foot-grid{grid-template-columns:1fr;gap:26px}
+}
+@media(max-width:720px){
+  .burger{display:block}
+  .nav{display:none;width:100%;flex-direction:column;padding:8px 0 12px}
+  .nav.open{display:flex}
+  .navbar{flex-wrap:wrap}
+  .g2,.g3,.g4{grid-template-columns:1fr}
+  .section{padding:52px 0}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<!-- ===================================================================
+     ALL EDITABLE CONTENT LIVES IN THIS ONE BLOCK.
+     Edit it by hand, OR use the built-in editor (footer -> "Edit site").
+     =================================================================== -->
+<script id="site-data" type="application/json">
+{
+  "admin": { "password": "rocvai2026" },
+  "meta": {
+    "shortName": "ROCV-AI 2026",
+    "tagline": "Department of ECE, KLEF Bowrampet Campus",
+    "fullTitle": "International Conference on Emerging Trends in Robotics, Communication, VLSI, and Artificial Intelligence",
+    "conferenceDates": "May 15-16, 2026",
+    "venueShort": "KLEF Bowrampet Campus, Hyderabad",
+    "registrationFormUrl": "https://forms.gle/77d6Y8t9wzjrS4jc7"
+  },
+  "nav": [
+    { "label": "About", "path": "about" },
+    { "label": "Call for Papers", "path": "call-for-papers" },
+    { "label": "Important Dates", "path": "important-dates" },
+    { "label": "Speakers", "path": "speakers" },
+    { "label": "Committee", "path": "committee" },
+    { "label": "Venue", "path": "venue" },
+    { "label": "Registration", "path": "registration" },
+    { "label": "Sponsorship", "path": "sponsorship" }
+  ],
+  "home": {
+    "heroEyebrow": "International Conference 2026",
+    "heroTitle": "ROCV-AI 2026",
+    "heroSubtitle": "International Conference on Emerging Trends in Robotics, Communication, VLSI, and Artificial Intelligence",
+    "welcomeHeading": "Welcome to ROCV-AI 2026",
+    "welcomeParas": [
+      "ROCV-AI 2026 (International Conference on Emerging Trends in Robotics, Communication, VLSI, and Artificial Intelligence) aims to serve as a premier global forum for researchers, academicians, and industry professionals. The conference focuses on emerging and integrated intelligent systems that seamlessly combine robotics, electronics, VLSI hardware, embedded systems, communication technologies, and advanced AI algorithms.",
+      "Key thrust areas include AI-driven robotics, on-chip intelligence and VLSI architectures, secure and low-power electronic systems, and next-generation communication technologies. The conference emphasizes advancements in Artificial Intelligence, Machine Learning, and Deep Learning for intelligent, connected, and real-time robotic and cyber-physical applications."
+    ],
+    "welcomeImage": "https://ece-conference-web.vercel.app/klh.jpg",
+    "welcomeImageTitle": "KLEF Bowrampet Campus",
+    "welcomeImageSub": "Hyderabad, India \u2022 May 15-16, 2026",
+    "quickCards": [
+      { "title": "Conference Dates", "text": "May 15-16, 2026", "linkLabel": "View important dates", "linkPath": "important-dates" },
+      { "title": "Venue", "text": "KLEF Bowrampet Campus, Hyderabad", "linkLabel": "Venue details", "linkPath": "venue" },
+      { "title": "Submissions", "text": "Submit your papers on Robotics, Communication, VLSI, and Artificial Intelligence", "linkLabel": "View call for papers", "linkPath": "call-for-papers" }
+    ],
+    "areasHeading": "Key Research Areas",
+    "areas": [
+      { "title": "AI & Machine Learning", "desc": "Deep Learning, Edge AI, Explainable AI, and AI-driven systems for real-world applications", "image": "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&auto=format&fit=crop" },
+      { "title": "Robotics & IoT", "desc": "AI-driven robotics, Industrial IoT, Smart systems, and autonomous technologies", "image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&auto=format&fit=crop" },
+      { "title": "VLSI & Hardware", "desc": "FPGA design, Hardware security, On-chip intelligence, and secure IC design", "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&auto=format&fit=crop" },
+      { "title": "5G/6G Networks", "desc": "Next-gen wireless, Secure communication, and advanced networking protocols", "image": "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=800&auto=format&fit=crop" },
+      { "title": "Cryptography", "desc": "Lightweight cryptography, Post-quantum security, and blockchain technologies", "image": "https://images.unsplash.com/photo-1614064641938-3bbee52942c7?w=800&auto=format&fit=crop" },
+      { "title": "Embedded Systems", "desc": "Real-time systems, Cyber-physical applications, and edge computing solutions", "image": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&auto=format&fit=crop" }
+    ],
+    "contactHeading": "Get in Touch",
+    "contactIntro": "For any queries related to the conference, please feel free to contact us.",
+    "contactEmailLabel": "Email",
+    "contactEmail": "dr.kirankumar@klh.edu.in",
+    "contactAddressLabel": "Address",
+    "contactAddress": "Department of ECE,\nKL University, Bachupally,\nHyderabad",
+    "contactImage": "https://images.unsplash.com/photo-1596524430615-b46475ddff6e?w=800&auto=format&fit=crop"
+  },
+  "dates": {
+    "eyebrow": "Conference Timeline",
+    "title": "Important Dates",
+    "intro": "Plan your research journey with these critical milestones for ROCV-AI 2026. Please ensure you meet all deadlines to secure your participation.",
+    "noticeTitle": "Submission Guidelines",
+    "noticeText": "All deadlines are at 11:59 PM (IST) on the specified date. Late submissions will not be considered. Ensure your research papers meet the conference standards and follow the prescribed format guidelines.",
+    "items": [
+      { "title": "Last Date for Paper Submission", "date": "March 25, 2026", "status": "Active Period" },
+      { "title": "Notification of Acceptance", "date": "April 25, 2026", "status": "Scheduled" },
+      { "title": "Submission of Camera-Ready Paper", "date": "May 01, 2026", "status": "Scheduled" },
+      { "title": "Conference Registration", "date": "May 01, 2026", "status": "Scheduled" },
+      { "title": "Conference Dates", "date": "May 15-16, 2026", "status": "Scheduled" },
+      { "title": "Local Visit to Hyderabad", "date": "May 17, 2026", "status": "Scheduled" }
+    ]
+  },
+  "about": {
+    "title": "About",
+    "uniHeading": "About University",
+    "uniName": "Koneru Lakshmaiah Education Foundation (KLEF)",
+    "uniSub": "Deemed to be university established in 1980-81, offering outstanding undergraduate, postgraduate and doctoral programmes in engineering and management.",
+    "uniImage": "https://ece-conference-web.vercel.app/img2.jpeg",
+    "uniParas": [
+      "Koneru Lakshmaiah Education Foundation (KLEF) Deemed to be university was established in 1980-81, as KL College of Engineering, which was upgraded to KL College of Engineering Autonomous in 2006 by UGC, and was declared as a Deemed to be University in 2009 by UGC, MHRD Government of India.",
+      "The first off campus has come up in A.Y 2018-2019 at Hyderabad, Moinabad, Aziznagar Road, near TSPA Junction, on the road leading to Chilkur Balaji temple. KLEF has inaugurated its second off campus in A.Y. 2023-2024 in Bowrampet Village, Medchal, Malkajgiri District, Greater Hyderabad.",
+      "University offers outstanding undergraduate, postgraduate and doctoral programmes in engineering and management streams from two campuses, Vijayawada and Hyderabad. KLEF has established an ecosystem to promote innovation, including a centre for Innovation, Incubation and Entrepreneurship Cell (IIEC), leading to start-ups in different disciplines. Through publishing research articles in various national and international refereed journals, particularly in Scopus/WoS/SCI indexed journals, research has taken a quantum leap towards improving its quality, resulting in good h-index."
+    ],
+    "deptHeading": "About ECE Department",
+    "deptName": "Department of Electronics and Communication Engineering (ECE)",
+    "deptEstablished": "2023",
+    "deptPrograms": "Undergraduate (B.Tech.) and Doctoral (Ph.D.) programs",
+    "deptImage": "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&auto=format&fit=crop",
+    "deptParas": [
+      "The Department of Electronics and Communication Engineering (ECE) was established in the year 2023 and offers Undergraduate (B.Tech.) and Doctoral (Ph.D.) programs. The department takes pride in its highly qualified faculty, with academic and research backgrounds from reputed international universities such as Arizona State University (USA), University of Texas (USA), and Pusan National University (Republic of Korea), as well as premier national institutions including IITs, IISc, NITs, BITS and Top Central Universities.",
+      "Electronics and Communication Engineering is a diverse and rapidly evolving discipline encompassing a wide range of sub-fields such as Analog and Digital Electronics, VLSI Design, Micro/Nano-electronics, 4G/5G Communication Systems, Radio and Satellite Communications, Embedded Systems, Signal and Image Processing, Robotics, Internet of Things (IoT), Smart Cities, Edge Computing, Artificial Intelligence, Quantum Circuitry, Photonics, Renewable Energy Systems and many other emerging technologies.",
+      "The ECE discipline uses advanced simulation tools, algorithms, and fabrication technologies to design and develop active and passive electronic devices such as diodes, transistors, semiconductor devices, and integrated circuits, enabling applications in electronic circuits, VLSI systems, PCBs, nano-devices, and related systems."
+    ],
+    "confHeading": "About ROCV-AI 2026",
+    "confImage": "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1200&auto=format&fit=crop",
+    "confParas": [
+      "ROCV-AI 2026 (International Conference on Emerging Trends in Robotics, Communication, VLSI, and Artificial Intelligence) aims to serve as a premier global forum for researchers, academicians, and industry professionals. The conference focuses on emerging and integrated intelligent systems that seamlessly combine robotics, electronics, VLSI hardware, embedded systems, communication technologies, and advanced AI algorithms.",
+      "Key thrust areas include AI-driven robotics, on-chip intelligence and VLSI architectures, secure and low-power electronic systems, and next-generation communication technologies. ROCV-AI 2026 emphasizes advancements in Artificial Intelligence, Machine Learning, and Deep Learning for intelligent, connected, and real-time robotic and cyber-physical applications.",
+      "The conference also highlights innovations in algorithms for sensing, perception, control, signal processing, communication, networking, and system optimization, with a strong focus on hardware-aware AI, edge intelligence, and communication-efficient robotic systems. Industry-focused sessions and expert keynote talks aim to bridge the gap between theoretical research and real-world deployment."
+    ],
+    "organizedBy": "Department of Electronics and Communication Engineering, KL University, Bowrampet Campus, Hyderabad"
+  },
+  "cfp": {
+    "title": "Call for Papers",
+    "heroImage": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=1200&auto=format&fit=crop",
+    "subHeading": "Submit Your Research",
+    "subText": "Join us in advancing the frontiers of technology and innovation",
+    "intro": [
+      "Authors are invited to submit original and unpublished research papers with an innovative idea on topics within the broad areas of Robotics, Communication, VLSI, and Artificial Intelligence, including (but not limited to): Artificial Intelligence & Machine Learning, Internet of Things, FPGA Design, Cryptography, Hardware Security, and Secure Communication.",
+      "ROCV-AI 2026 aims to serve as a premier global forum for researchers, academicians, and industry professionals. The conference emphasizes advancements in AI, ML, and Deep Learning for intelligent, connected, and real-time robotic and cyber-physical applications."
+    ],
+    "tracksHeading": "Research Tracks",
+    "tracks": [
+      { "name": "Artificial Intelligence (AI) & Machine Learning (ML)", "topics": ["Deep learning architectures and training methods","Explainable and trustworthy AI","Edge AI and on-device inference","Computer vision and image understanding","Natural language and speech processing","Reinforcement learning for control","Federated and privacy-preserving learning","Generative models and foundation models"] },
+      { "name": "Robotics & Internet of Things (IoT)", "topics": ["Autonomous navigation and path planning","Human-robot interaction","Industrial IoT and Industry 4.0","Sensor fusion and perception","Swarm and multi-robot systems","Smart cities and connected infrastructure","Wearable and healthcare IoT","Real-time robotic operating systems"] },
+      { "name": "VLSI Design / FPGA Prototype Design", "topics": ["Low-power VLSI architectures","FPGA prototyping and hardware acceleration","Analog and mixed-signal IC design","Physical design and DFT","Memory design and emerging devices","AI accelerators and on-chip intelligence","SoC design and verification","Nano-electronics and quantum circuitry"] },
+      { "name": "Cryptography", "topics": ["Lightweight cryptography for constrained devices","Post-quantum cryptographic schemes","Blockchain and distributed ledger technology","Elliptic curve and lattice-based cryptography","Homomorphic encryption","Key management and PKI","Cryptanalysis and side-channel resistance","Random number generation and PUFs"] },
+      { "name": "Hardware Security", "topics": ["Side-channel attacks and countermeasures","Hardware trojan detection","Secure boot and trusted execution","IP protection and watermarking","Fault injection attacks","Physically unclonable functions","Secure IC design methodologies","Supply chain security for electronics"] },
+      { "name": "Secure Communication", "topics": ["5G and 6G network security","Physical layer security","Secure wireless sensor networks","MIMO and beamforming techniques","Cognitive radio and spectrum sharing","Satellite and radio communication","Optical and photonic communication","Network coding and protocol design","Intrusion detection in communication networks"] }
+    ],
+    "guidelinesHeading": "Submission Guidelines",
+    "guidelines": [
+      "Authors must submit the full length paper in the prescribed Conference Template.",
+      "Only registered delegates can attend the conference.",
+      "At least one author must register and present the paper to include it in the proceedings.",
+      "Multiple authors of the same paper must register separately.",
+      "UG/PG/Research scholars must attach a letter from HOD/Dean/Principal/Research Guide verifying full-time status.",
+      "Registered candidates cannot claim a refund for absence.",
+      "All selected, registered, and presented papers will be considered for publication in Scopus indexed journal."
+    ],
+    "processHeading": "Submission Process",
+    "processIntro": "All papers must be submitted electronically using the prescribed conference template. Authors are requested to follow these steps:",
+    "steps": [
+      "Prepare your paper according to the Conference Template.",
+      "Ensure your paper addresses topics within the conference scope.",
+      "Convert your paper to PDF format.",
+      "Submit your paper through the designated submission system.",
+      "You will receive confirmation after successful submission.",
+      "Track the status of your submission and review process."
+    ],
+    "whoHeading": "Who Can Attend",
+    "whoText": "Participation in this conference is open to faculty members, research scholars, post-graduate and under-graduate students from academics, research institutes/industry, and working professionals.",
+    "whoImage": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop"
+  },
+  "speakers": {
+    "title": "Meet Our Keynote Speakers",
+    "eyebrow": "Distinguished Speakers",
+    "intro": "Distinguished experts from academia and industry will share their insights and latest research findings.",
+    "items": [
+      { "initials": "TB", "tag": "Keynote", "name": "To Be Announced", "role": "Details will be updated soon", "expertise": "Stay tuned for exciting keynote speakers", "note": "Announcement Coming Soon" }
+    ]
+  },
+  "committee": {
+    "title": "Conference Committee",
+    "intro": "ROCV-AI 2026 is guided by an international panel of academic and industry leaders.",
+    "groups": [
+      { "name": "Chief Patrons", "members": [
+        { "name": "Sri Koneru Satyanarayana", "role": "Chancellor and President, KLEF" },
+        { "name": "Sri K. Havish Lakshman", "role": "Vice-President, KLEF" },
+        { "name": "Sri K. Raja Harin", "role": "Vice-President, KLEF" }
+      ]},
+      { "name": "Co-Patrons", "members": [
+        { "name": "Dr. K. S. Jagannatha Rao", "role": "Pro-Chancellor, KLEF" },
+        { "name": "Dr. G. Pardhasaradhi Varma", "role": "Vice Chancellor, KLEF" },
+        { "name": "Dr. N. Venkat Ram", "role": "Pro-Vice Chancellor, KLEF" },
+        { "name": "Dr. K. Rajasekhara Rao", "role": "Pro Vice-Chancellor, KLEF" },
+        { "name": "Dr. A. V. S. Prasad", "role": "Pro-Vice Chancellor, KLEF" },
+        { "name": "Dr. K. Subba Rao", "role": "Registrar, KLEF" }
+      ]},
+      { "name": "General Chairs", "members": [
+        { "name": "Dr. L Koteswara Rao", "role": "Principal, KLEF, Bowrampet Campus" },
+        { "name": "Dr. S. Srinivasa Rao", "role": "HoD-ECE, KLEF, Bowrampet Campus" }
+      ]},
+      { "name": "Convener", "members": [
+        { "name": "Dr. A. Kiran Kumar", "role": "KLEF, Bowrampet Campus, Hyderabad" }
+      ]},
+      { "name": "Co-Convener", "members": [
+        { "name": "Dr. Nimmala Arun", "role": "KLEF, Bowrampet Campus, Hyderabad" }
+      ]},
+      { "name": "Coordinators", "members": [
+        { "name": "Dr. Kota Surendra", "role": "Assistant Professor, KLH Bowrampet Campus" },
+        { "name": "Mr Satya Prasad Gaddamedi", "role": "Assistant Professor, KLH Bowrampet Campus" }
+      ]},
+      { "name": "Steering Committee", "members": [
+        { "name": "Dr. A. Prabahakara Rao", "role": "Professor, KLH Bowrampet Campus" },
+        { "name": "Dr. B. Sai Prasad", "role": "Professor, KLH Bowrampet Campus" },
+        { "name": "Dr. Kalyan S Kasturi", "role": "Professor, KLH Bowrampet Campus" }
+      ]},
+      { "name": "Organizing Committee", "members": [
+        { "name": "Dr Vuddagiri Ravi Kumar", "role": "Associate Professor, KLH Bowrampet Campus" },
+        { "name": "Dr Vinnakota Venu Balaji", "role": "Assistant Professor, KLH Bowrampet Campus" },
+        { "name": "Dr R V Sravya", "role": "Assistant Professor, KLH Bowrampet Campus" },
+        { "name": "Dr V Sahiti", "role": "Assistant Professor, KLH Bowrampet Campus" },
+        { "name": "Dr Y Ramesh Babu", "role": "Assistant Professor, KLH Bowrampet Campus" },
+        { "name": "Dr Bere Praveen Sai", "role": "Assistant Professor, KLH Bowrampet Campus" },
+        { "name": "Dr V Vaishnavi", "role": "Assistant Professor, KLH Bowrampet Campus" },
+        { "name": "Dr Rahul LR", "role": "Assistant Professor, KLH Bowrampet Campus" },
+        { "name": "Dr. Purva Sharma", "role": "Assistant Professor, KLH Bowrampet Campus" },
+        { "name": "Mr. N Lava Prasad", "role": "Assistant Professor, KLH Bowrampet Campus" }
+      ]},
+      { "name": "International Technical Advisory Committee", "members": [
+        { "name": "Dr. Sesham Srinu", "role": "Senior Lecturer, University of Namibia" },
+        { "name": "Prof. Kandasamy Prabakar", "role": "Professor at Pusan National University, Republic of Korea" },
+        { "name": "Prof. Hee-Je Kim", "role": "Professor at Pusan National University, Republic of Korea" },
+        { "name": "Dr. Challa Sesha Sai Pavan Kumar", "role": "Senior Researcher, NIST, USA" },
+        { "name": "Dr. Naveen Halappa", "role": "Postdoctoral Fellow, KAUST, Saudi Arabia" },
+        { "name": "Dr. Shyam Akashe", "role": "Dean (International Cooperation & Projects) and Professor, ITM University" },
+        { "name": "Dr. Murali Mohan Cheepu", "role": "Research Manager, Starwelds Inc, Busan, Republic of Korea" },
+        { "name": "Dr. Reddi Mohan Naidu Kalla", "role": "Associate Professor, Yeungnam University, Republic of Korea" },
+        { "name": "Dr. Mannin Himanshu", "role": "E-Mobility Senior Engineer, RSTER, Zaventem, Belgium" },
+        { "name": "Mr. Lava K Vandrangi", "role": "Senior Engineer, Pepco Holdings, USA" },
+        { "name": "Dr. Mohd Amiruddin Bin ABD Rahman", "role": "Professor, University of Putra Malaysia, Malaysia" },
+        { "name": "Dr. Ujval Mutyala", "role": "Senior Research Fellow, Eastern Illinois University, Charleston, USA" },
+        { "name": "Dr. Srihansha Chollangi", "role": "Senior Research Fellow, Gannon University, USA" },
+        { "name": "Dr. Chandu V V Muralee Gopi", "role": "Assistant Professor, University of Sharjah, UAE" }
+      ]},
+      { "name": "National Technical Advisory Committee", "members": [
+        { "name": "Prof. S.L. Sabat", "role": "Professor, University of Hyderabad" },
+        { "name": "Prof. S.V.S. Nageswara Rao", "role": "Professor, University of Hyderabad" },
+        { "name": "Dr. Amit Acharyya", "role": "Professor, IIT Hyderabad" },
+        { "name": "Dr. Anil Kumar Vuppala", "role": "Professor, IIIT Hyderabad" },
+        { "name": "Dr. P. Rangababu", "role": "Associate Professor, IIITDM, Kurnool" },
+        { "name": "Dr. S.L.D Varma", "role": "Assistant Professor, University of Hyderabad" },
+        { "name": "Mr. Venkat Reddy", "role": "Systems Engineer, Signion Systems" },
+        { "name": "Mr. Anil Kumar", "role": "Physical Design Engineer, Infosys" },
+        { "name": "Mr. Shravan Kumar", "role": "Design Engineer, HCL" },
+        { "name": "Dr. Rena Rakesh", "role": "Senior Analog & RFIC Design Engineer, Sasken Tech. Ltd." },
+        { "name": "Dr. Anakhi Hazarika", "role": "Assistant Professor, BITS, Hyderabad" },
+        { "name": "Dr. Runa Kumari", "role": "Associate Professor, BITS, Hyderabad" },
+        { "name": "Dr. Prasant Kumar Pattnaik", "role": "Associate Professor, BITS, Hyderabad" },
+        { "name": "Dr. Venkateswaran Rajagopalan", "role": "Associate Professor, BITS, Hyderabad" },
+        { "name": "Dr. Prasad Naik Ramavath", "role": "Assistant Professor, National Institute of Technology, Rourkela, India" }
+      ]}
+    ]
+  },
+  "venue": {
+    "title": "Conference Venue",
+    "mainHeading": "Main Conference Venue",
+    "name": "KLEF Bowrampet Campus, Hyderabad, India",
+    "description": "The conference will be held at the state-of-the-art facilities of KLEF Bowrampet Campus, Hyderabad. KLEF (Koneru Lakshmaiah Education Foundation) Deemed to be University has inaugurated its second off campus in A.Y. 2023-2024 in Bowrampet Village, Medchal, Malkajgiri District, Greater Hyderabad. The venue is equipped with modern amenities and offers an ideal environment for academic discussions and networking.",
+    "address": "KLEF Bowrampet Campus\nBowrampet Village, Medchal\nMalkajgiri District, Greater Hyderabad\nTelangana, India",
+    "image": "https://ece-conference-web.vercel.app/img1.jpeg",
+    "imageCaption": "KLEF Bowrampet Campus",
+    "reachHeading": "How to Reach",
+    "reach": [
+      { "label": "From Airport", "text": "Approximately 30 km (45-60 minutes drive)" },
+      { "label": "From Railway Station", "text": "Approximately 20 km (30-45 minutes drive)" },
+      { "label": "Local Transport", "text": "Cabs, auto-rickshaws and bus services are available" }
+    ],
+    "stayHeading": "Nearby Accommodations",
+    "stay": ["Hotel Royal Park (3 km)", "Grand Hyderabad Hotel (5 km)", "The Platinum Inn (4 km)", "Green Valley Resorts (2 km)"],
+    "cityHeading": "About Hyderabad",
+    "cityImage": "https://images.unsplash.com/photo-1599661046289-e31897846e41?w=800&auto=format&fit=crop",
+    "cityParas": [
+      "Hyderabad, the capital of Telangana, is a major center for the technology industry in India. The city is known for its rich history, delicious cuisine, and warm hospitality.",
+      "The city is famous for its monuments like Charminar, Golconda Fort, and the Qutb Shahi Tombs. It is also known as the \"City of Pearls\" due to its historical association with the pearl trade.",
+      "Hyderabad has pleasant weather in May, with average temperatures ranging from 25\u00b0C to 35\u00b0C. The conference is scheduled during a comfortable time to visit the city and participate in academic activities."
+    ],
+    "visitHeading": "Local Visit",
+    "visitImage": "https://images.unsplash.com/photo-1598970434795-0c54fe7c0648?w=800&auto=format&fit=crop",
+    "visitBadge": "May 17, 2026 - Day 3",
+    "visitTitle": "Explore Hyderabad",
+    "visitParas": [
+      "On the third day of the conference (May 17, 2026), participants will be taken on a local visit to selected places in Hyderabad. This is a great opportunity to experience the rich cultural heritage and modern attractions of the \"City of Pearls.\"",
+      "The visit will include iconic landmarks and tourist attractions, allowing participants to explore Hyderabad's unique blend of tradition and modernity. More details about the itinerary will be shared closer to the conference dates."
+    ],
+    "facilitiesHeading": "Venue Facilities",
+    "facilitiesImage": "https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?w=800&auto=format&fit=crop",
+    "facilities": [
+      { "label": "State-of-the-art Auditorium", "text": "With seating capacity for 300+ attendees" },
+      { "label": "Seminar Halls", "text": "Multiple fully-equipped seminar halls for parallel sessions" },
+      { "label": "High-speed Wi-Fi", "text": "Throughout the venue" },
+      { "label": "Exhibition Area", "text": "For sponsors and industry partners" },
+      { "label": "Dining Facilities", "text": "For breakfast, lunch, and refreshments" },
+      { "label": "Accessibility", "text": "The venue is fully accessible for persons with disabilities" }
+    ]
+  },
+  "registration": {
+    "title": "Registration Information",
+    "subtitle": "Registration deadline is May 01, 2026. Conference dates: May 15-16, 2026.",
+    "feesHeading": "Registration Fees",
+    "feeGroups": [
+      { "name": "Non-IEEE Members", "badge": "", "rows": [
+        { "label": "Faculty/Research Scholar", "amount": "\u20b9 2,500 ($ 30)" },
+        { "label": "Industry Members", "amount": "\u20b9 3,000 ($ 35)" },
+        { "label": "Students", "amount": "\u20b9 2,000 ($ 25)" },
+        { "label": "Attendees", "amount": "\u20b9 1,000 ($ 10)" }
+      ]},
+      { "name": "IEEE Members", "badge": "Discounted Rates", "rows": [
+        { "label": "Faculty/Research Scholar", "amount": "\u20b9 2,000 ($ 25)" },
+        { "label": "Industry Members", "amount": "\u20b9 2,500 ($ 30)" },
+        { "label": "Students", "amount": "\u20b9 1,500 ($ 20)" },
+        { "label": "Attendees", "amount": "\u20b9 500 ($ 5)" }
+      ]}
+    ],
+    "feeNotes": [
+      "Registration fee includes access to all sessions, conference kit, snacks & lunch",
+      "UG/PG/Research scholars must attach a letter from HOD/Dean/Principal/Research Guide verifying full-time status",
+      "At least one author must register and present the paper to include it in the proceedings",
+      "Multiple authors of the same paper must register separately",
+      "Registered candidates cannot claim a refund for absence"
+    ],
+    "includesHeading": "Registration Includes",
+    "includes": [
+      "Access to all technical sessions and keynote talks",
+      "Conference kit including program schedule",
+      "Lunch and snacks during conference days",
+      "Certificate of participation",
+      "Conference proceedings with ISBN",
+      "Consideration for publication in Scopus indexed journal (with APC if applicable)",
+      "Selected papers may be recommended for submission to Scopus Indexed Journal \"International Research Journal of Multidisciplinary Technovation (IRJMT)\", Journal of Applied Sciences and Multidisciplinary Engineering (non-scopus indexed) included in a special collection if accepted"
+    ],
+    "paymentHeading": "Payment Methods & Registration",
+    "onlineHeading": "Online Registration",
+    "onlineText": "Register online through Google Forms:",
+    "bankHeading": "Bank Transfer Details",
+    "bank": [
+      { "label": "Account Name", "value": "Koneru Lakshmaiah Education Foundation, Bowrampet" },
+      { "label": "Account Number", "value": "99914455566677" },
+      { "label": "Bank Name", "value": "HDFC Bank" },
+      { "label": "IFSC Code", "value": "HDFC0000109" }
+    ],
+    "ctaLabel": "Register Now for ROCV-AI 2026",
+    "ctaNote": "Click to access the registration form",
+    "contactHeading": "Contact for Registration",
+    "contacts": [
+      { "name": "Dr. R V Sravya", "title": "Assistant Professor", "affiliation": "KLH-Bowrampet, KLEF Deemed to be University, Hyderabad", "mobile": "+91-8317648839" },
+      { "name": "Dr. Y. Ramesh Babu", "title": "Assistant Professor", "affiliation": "KLH-Bowrampet, KLEF Deemed to be University, Hyderabad", "mobile": "+91-9085236881" }
+    ],
+    "faqHeading": "Frequently Asked Questions",
+    "faqs": [
+      { "q": "Who can attend the conference?", "a": "Participation is open to faculty members, research scholars, post-graduate and under-graduate students from academics, research institutes/industry, and working professionals." },
+      { "q": "What documents are required for student registration?", "a": "UG/PG/Research scholars must attach a letter from HOD/Dean/Principal/Research Guide verifying full-time status." },
+      { "q": "What is the refund policy?", "a": "Registered candidates cannot claim a refund for absence. Please ensure your availability before registration." },
+      { "q": "Do multiple authors need separate registrations?", "a": "Yes, multiple authors of the same paper must register separately. At least one author must register and present the paper." },
+      { "q": "Will papers be published?", "a": "All papers will be published in conference proceedings with ISBN. All selected, registered, and presented papers will be considered for publication in Scopus indexed journal with APC (excluding Registration Fee), if applicable, must be paid by authors." }
+    ]
+  },
+  "sponsorship": {
+    "title": "Call for Sponsorship",
+    "intro": "We invite organizations and industry partners to join us as sponsors for the symposium. Sponsorship provides an excellent opportunity to promote your company to a focused and professional audience comprising academicians, researchers, industry experts, and students.",
+    "benefitsHeading": "Benefits of Partnership",
+    "benefits": [
+      { "title": "High Visibility", "text": "Reach a specialized target audience of academicians, researchers, and industry professionals" },
+      { "title": "Brand Recognition", "text": "Promote your brand through website, brochure, and event materials" },
+      { "title": "Networking Opportunities", "text": "Connect with experts, decision-makers, and future talent in the field" },
+      { "title": "Prestigious Association", "text": "Align your organization with a leading academic and industry event" }
+    ],
+    "oppsHeading": "Sponsorship Opportunities",
+    "oppsText": "We offer multiple sponsorship categories tailored to suit different levels of engagement and visibility. Each category provides unique benefits and recognition opportunities throughout the conference. For detailed information about sponsorship packages and pricing, please contact us.",
+    "contactHeading": "Get in Touch",
+    "contacts": [
+      { "name": "Dr. R V Sravya", "title": "Assistant Professor", "affiliation": "KLH-Bowrampet, Koneru Lakshmaiah Education Foundation, Deemed to be University, Hyderabad", "mobile": "+91-8317648839" },
+      { "name": "Dr. Y. Ramesh Babu", "title": "Assistant Professor", "affiliation": "KLH-Bowrampet, Koneru Lakshmaiah Education Foundation, Deemed to be University, Hyderabad", "mobile": "+91-9085236881" }
+    ],
+    "ctaTitle": "Become a Partner",
+    "ctaText": "Join us in promoting cutting-edge research and innovation in Robotics, Communication, VLSI, and Artificial Intelligence",
+    "ctaLabel": "Contact us for sponsorship"
+  },
+  "footer": {
+    "about": "International Conference on Emerging Trends in Robotics, Communication, VLSI, and Artificial Intelligence",
+    "line1": "May 15-16, 2026",
+    "line2": "KLEF Bowrampet Campus, Hyderabad, India",
+    "contactAddress": "Department of Electronics and Communication Engineering,\nKLEF Bowrampet Campus,\nHyderabad",
+    "email": "dr.kirankumar@klh.edu.in",
+    "mobile": "+91-9703332849",
+    "copyright": "\u00a9 2026 ROCV-AI 2026. All rights reserved.",
+    "organizedBy": "Organized by Department of Electronics and Communication Engineering, KLEF Bowrampet Campus"
+  }
+}
+</script>
+
+<header class="site">
+  <div class="navbar">
+    <a class="brand" data-go="home" tabindex="0" id="brand"></a>
+    <button class="burger" id="burger" aria-label="Toggle menu">&#9776;</button>
+    <nav class="nav" id="nav"></nav>
+  </div>
+</header>
+
+<main id="app"></main>
+
+<footer class="site">
+  <div class="wrap" id="footer"></div>
+</footer>
+
+<div id="admScrim"></div>
+<aside id="admin" aria-label="Site editor">
+  <div class="adm-head">
+    <h3>Site editor</h3>
+    <button id="admClose" aria-label="Close editor">&times;</button>
+  </div>
+  <div class="adm-tabs" id="admTabs"></div>
+  <div class="adm-body" id="admBody"></div>
+  <div class="adm-foot">
+    <button class="btn btn-gold" id="admSave" style="padding:9px 18px;font-size:.88rem">Download updated site</button>
+    <button class="mini" id="admJson">Copy content as JSON</button>
+    <span class="small-note" style="margin:0">Changes preview live. Download to keep them.</span>
+  </div>
+</aside>
+<div class="toast" id="toast"></div>
+
+<script>
+var ORIGINAL_HTML = '<!DOCTYPE html>\n' + document.documentElement.outerHTML;
+var D = JSON.parse(document.getElementById('site-data').textContent);
+
+/* ---------- helpers ---------- */
+function esc(s){return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+function nl(s){return esc(s).replace(/\n/g,'<br>');}
+function paras(a){return (a||[]).map(function(p){return '<p>'+esc(p)+'</p>';}).join('');}
+function li(a){return '<ul class="clean">'+(a||[]).map(function(x){return '<li>'+esc(x)+'</li>';}).join('')+'</ul>';}
+function pill(s){
+  var t=(s||'').toLowerCase(), c='scheduled';
+  if(t.indexOf('active')>-1) c='active';
+  else if(t.indexOf('pass')>-1||t.indexOf('closed')>-1) c='passed';
+  return '<span class="pill '+c+'">'+esc(s)+'</span>';
+}
+function toast(m){var t=document.getElementById('toast');t.textContent=m;t.className='toast show';setTimeout(function(){t.className='toast';},2200);}
+
+var ICONS = [
+ /* neural net */ '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="5" cy="6" r="2"/><circle cx="5" cy="18" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="19" cy="6" r="2"/><circle cx="19" cy="18" r="2"/><path d="M7 7l3 4M7 17l3-5M14 11l3-4M14 13l3 4"/></svg>',
+ /* robot */ '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="8" width="16" height="11" rx="3"/><path d="M12 4v4M8 19v2M16 19v2M2 12v3M22 12v3"/><circle cx="9" cy="13" r="1.2" fill="currentColor" stroke="none"/><circle cx="15" cy="13" r="1.2" fill="currentColor" stroke="none"/></svg>',
+ /* iot */ '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="2.5"/><circle cx="4" cy="5" r="2"/><circle cx="20" cy="5" r="2"/><circle cx="4" cy="19" r="2"/><circle cx="20" cy="19" r="2"/><path d="M5.6 6.5l4.6 4M18.4 6.5l-4.6 4M5.6 17.5l4.6-4M18.4 17.5l-4.6-4"/></svg>',
+ /* signal */ '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="2" fill="currentColor" stroke="none"/><path d="M8.5 8.5a5 5 0 000 7M15.5 8.5a5 5 0 010 7M5.5 5.5a9 9 0 000 13M18.5 5.5a9 9 0 010 13"/></svg>',
+ /* chip */ '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="7" y="7" width="10" height="10" rx="1.5"/><rect x="10.5" y="10.5" width="3" height="3"/><path d="M10 4v3M14 4v3M10 17v3M14 17v3M4 10h3M4 14h3M17 10h3M17 14h3"/></svg>',
+ /* lock */ '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="5" y="10" width="14" height="10" rx="2.5"/><path d="M8.5 10V7a3.5 3.5 0 017 0v3"/><circle cx="12" cy="15" r="1.3" fill="currentColor" stroke="none"/></svg>'
+];
+
+/* ---------- chrome ---------- */
+function renderChrome(){
+  document.getElementById('brand').innerHTML = esc(D.meta.shortName)+'<small>'+esc(D.meta.tagline)+'</small>';
+  var cur = CURRENT;
+  document.getElementById('nav').innerHTML = D.nav.map(function(n){
+    return '<a data-go="'+esc(n.path)+'" tabindex="0" class="'+(cur===n.path?'active':'')+'">'+esc(n.label)+'</a>';
+  }).join('');
+  var f=D.footer;
+  document.getElementById('footer').innerHTML =
+    '<div class="foot-grid">'+
+      '<div><h4>'+esc(D.meta.shortName)+'</h4><p>'+esc(f.about)+'</p><p style="margin:0"><b style="color:#fff">'+esc(f.line1)+'</b><br>'+esc(f.line2)+'</p></div>'+
+      '<div><h4>Quick links</h4><ul class="foot-links">'+
+        '<li><a data-go="home">Home</a></li>'+
+        D.nav.map(function(n){return '<li><a data-go="'+esc(n.path)+'">'+esc(n.label)+'</a></li>';}).join('')+
+      '</ul></div>'+
+      '<div><h4>Contact</h4><p>'+nl(f.contactAddress)+'</p>'+
+        '<p style="margin:0"><a href="mailto:'+esc(f.email)+'">'+esc(f.email)+'</a><br>Mobile: '+esc(f.mobile)+'</p></div>'+
+    '</div>'+
+    '<div class="foot-bottom"><div>'+esc(f.copyright)+'<br>'+esc(f.organizedBy)+'</div>'+
+    '<button class="edit-link" id="editBtn">Edit site</button></div>';
+  document.getElementById('editBtn').onclick = openAdmin;
+}
+
+/* ---------- pages ---------- */
+function banner(eyebrow,title,intro){
+  return '<section class="banner"><div class="wrap">'+
+    (eyebrow?'<div class="eyebrow">'+esc(eyebrow)+'</div>':'')+
+    '<h1>'+esc(title)+'</h1>'+(intro?'<p>'+esc(intro)+'</p>':'')+'</div></section>';
+}
+
+function pageHome(){
+  var h=D.home;
+  var s='<section class="hero"><div class="wrap">'+
+    '<div class="icon-strip" aria-hidden="true">'+ICONS.join('')+'</div>'+
+    '<div class="eyebrow">'+esc(h.heroEyebrow)+'</div>'+
+    '<h1>'+esc(h.heroTitle)+'</h1>'+
+    '<p class="hero-sub">'+esc(h.heroSubtitle)+'</p>'+
+    '<div class="hero-facts">'+
+      '<div class="fact"><span>Conference date</span><strong>'+esc(D.meta.conferenceDates)+'</strong></div>'+
+      '<div class="fact"><span>Venue</span><strong>'+esc(D.meta.venueShort)+'</strong></div>'+
+    '</div>'+
+    '<div class="btn-row"><a class="btn btn-gold" data-go="call-for-papers">Call for papers</a>'+
+    '<a class="btn btn-ghost" data-go="registration">Register now</a></div>'+
+  '</div></section>';
+
+  s+='<section class="section"><div class="wrap"><div class="split">'+
+    '<div><h2>'+esc(h.welcomeHeading)+'</h2>'+paras(h.welcomeParas)+'</div>'+
+    '<div class="media" style="height:340px"><img src="'+esc(h.welcomeImage)+'" alt="'+esc(h.welcomeImageTitle)+'">'+
+    '<div class="media-cap"><h4>'+esc(h.welcomeImageTitle)+'</h4><span>'+esc(h.welcomeImageSub)+'</span></div></div>'+
+  '</div></div></section>';
+
+  s+='<section class="section alt"><div class="wrap"><div class="grid g3">'+
+    (h.quickCards||[]).map(function(c){
+      return '<div class="card"><h3>'+esc(c.title)+'</h3><p>'+esc(c.text)+'</p>'+
+        '<p style="margin:12px 0 0"><a data-go="'+esc(c.linkPath)+'">'+esc(c.linkLabel)+'</a></p></div>';
+    }).join('')+
+  '</div></div></section>';
+
+  s+='<section class="section"><div class="wrap"><h2>'+esc(h.areasHeading)+'</h2>'+
+    '<div class="grid g3" style="margin-top:26px">'+
+    (h.areas||[]).map(function(a){
+      return '<div class="topic-card"><img src="'+esc(a.image)+'" alt="'+esc(a.title)+'" loading="lazy">'+
+        '<div class="body"><h3>'+esc(a.title)+'</h3><p>'+esc(a.desc)+'</p></div></div>';
+    }).join('')+
+    '</div><p style="margin-top:26px"><a class="btn btn-dark" data-go="call-for-papers">Explore all topics</a></p></div></section>';
+
+  var d=D.dates;
+  s+='<section class="section alt"><div class="wrap"><div class="center" style="margin-bottom:30px">'+
+    '<div class="eyebrow">Important deadlines</div><h2>Key conference dates</h2>'+
+    '<p class="lead">'+esc(d.intro)+'</p></div>'+
+    '<div class="dates-grid">'+(d.items||[]).map(function(x){
+      return '<div class="date-card"><h4>'+esc(x.title)+'</h4><div class="d">'+esc(x.date)+'</div>'+pill(x.status)+'</div>';
+    }).join('')+'</div>'+
+    '<p class="center" style="margin-top:28px"><a class="btn btn-dark" data-go="important-dates">View all dates</a></p></div></section>';
+
+  var sp=D.speakers;
+  s+='<section class="section"><div class="wrap"><div class="center" style="margin-bottom:28px">'+
+    '<div class="eyebrow">'+esc(sp.eyebrow)+'</div><h2>'+esc(sp.title)+'</h2>'+
+    '<p class="lead">'+esc(sp.intro)+'</p></div>'+
+    '<div class="grid g3">'+speakerCards()+'</div>'+
+    '<p class="center" style="margin-top:26px"><a class="btn btn-dark" data-go="speakers">View all speakers</a></p></div></section>';
+
+  s+='<section class="section alt"><div class="wrap"><div class="split">'+
+    '<div><h2>'+esc(h.contactHeading)+'</h2><p class="lead">'+esc(h.contactIntro)+'</p>'+
+      '<div class="card" style="margin-top:18px"><h4>'+esc(h.contactEmailLabel)+'</h4>'+
+      '<p><a href="mailto:'+esc(h.contactEmail)+'">'+esc(h.contactEmail)+'</a></p>'+
+      '<h4>'+esc(h.contactAddressLabel)+'</h4><p style="margin:0">'+nl(h.contactAddress)+'</p></div></div>'+
+    '<div class="media" style="height:330px"><img src="'+esc(h.contactImage)+'" alt="Contact"></div>'+
+  '</div></div></section>';
+  return s;
+}
+
+function speakerCards(){
+  return (D.speakers.items||[]).map(function(x){
+    return '<div class="card center">'+
+      '<div style="width:74px;height:74px;border-radius:50%;background:linear-gradient(135deg,var(--deep),var(--sky));color:#fff;font-family:Sora;font-weight:700;font-size:1.4rem;display:grid;place-items:center;margin:0 auto 14px">'+esc(x.initials)+'</div>'+
+      (x.tag?'<span class="pill scheduled">'+esc(x.tag)+'</span>':'')+
+      '<h3 style="margin-top:12px">'+esc(x.name)+'</h3>'+
+      '<p style="color:var(--muted)">'+esc(x.role)+'</p>'+
+      '<p style="font-size:.9rem;color:var(--muted);margin:0">'+esc(x.expertise)+'</p>'+
+      (x.note?'<p class="small-note" style="margin-top:10px">'+esc(x.note)+'</p>':'')+
+    '</div>';
+  }).join('');
+}
+
+function pageDates(){
+  var d=D.dates;
+  return banner(d.eyebrow,d.title,d.intro)+
+   '<section class="section"><div class="wrap">'+
+   '<div class="notice"><h4>'+esc(d.noticeTitle)+'</h4><p>'+esc(d.noticeText)+'</p></div>'+
+   '<div class="dates-grid">'+(d.items||[]).map(function(x){
+      return '<div class="date-card"><h4>'+esc(x.title)+'</h4><div class="d">'+esc(x.date)+'</div>'+pill(x.status)+'</div>';
+   }).join('')+'</div>'+
+   '<p style="margin-top:32px"><a class="btn btn-gold" data-go="registration">Go to registration</a></p>'+
+   '</div></section>';
+}
+
+function pageAbout(){
+  var a=D.about;
+  return banner('','About','')+
+  '<section class="section"><div class="wrap">'+
+    '<h2>'+esc(a.uniHeading)+'</h2>'+
+    '<div class="split" style="margin-top:20px">'+
+      '<div><h3>'+esc(a.uniName)+'</h3><p class="lead">'+esc(a.uniSub)+'</p>'+paras(a.uniParas)+'</div>'+
+      '<div class="media" style="height:330px"><img src="'+esc(a.uniImage)+'" alt="Campus"></div>'+
+    '</div></div></section>'+
+  '<section class="section alt"><div class="wrap">'+
+    '<h2>'+esc(a.deptHeading)+'</h2>'+
+    '<div class="split" style="margin-top:20px">'+
+      '<div><h3>'+esc(a.deptName)+'</h3>'+
+      '<div class="kv"><span>Established</span><b>'+esc(a.deptEstablished)+'</b></div>'+
+      '<div class="kv"><span>Programs offered</span><b>'+esc(a.deptPrograms)+'</b></div>'+
+      '<div style="margin-top:16px">'+paras(a.deptParas)+'</div></div>'+
+      '<div class="media" style="height:340px"><img src="'+esc(a.deptImage)+'" alt="ECE"></div>'+
+    '</div></div></section>'+
+  '<section class="section"><div class="wrap">'+
+    '<h2>'+esc(a.confHeading)+'</h2>'+
+    '<div class="media" style="height:300px;margin:20px 0 26px"><img src="'+esc(a.confImage)+'" alt="Conference"></div>'+
+    paras(a.confParas)+
+    '<p style="margin-top:18px"><b>Organized by:</b> '+esc(a.organizedBy)+'</p>'+
+  '</div></section>';
+}
+
+function pageCfp(){
+  var c=D.cfp;
+  return banner('','Call for Papers','')+
+  '<section class="section"><div class="wrap">'+
+    '<div class="media" style="height:290px;margin-bottom:30px"><img src="'+esc(c.heroImage)+'" alt="Research">'+
+    '<div class="media-cap"><h4>'+esc(c.subHeading)+'</h4><span>'+esc(c.subText)+'</span></div></div>'+
+    paras(c.intro)+
+  '</div></section>'+
+  '<section class="section alt"><div class="wrap"><h2>'+esc(c.tracksHeading)+'</h2>'+
+    '<div style="margin-top:22px">'+(c.tracks||[]).map(function(t,i){
+      return '<div class="track" data-acc><button type="button"><span>'+esc(t.name)+'</span>'+
+        '<span><span class="count">'+(t.topics||[]).length+' topics</span> <span class="chev">&#9660;</span></span></button>'+
+        '<div class="panel">'+li(t.topics)+'</div></div>';
+    }).join('')+'</div></div></section>'+
+  '<section class="section"><div class="wrap"><div class="grid g2">'+
+    '<div><h2>'+esc(c.guidelinesHeading)+'</h2>'+li(c.guidelines)+'</div>'+
+    '<div><h2>'+esc(c.processHeading)+'</h2><p>'+esc(c.processIntro)+'</p><ol class="steps">'+
+      (c.steps||[]).map(function(s){return '<li>'+esc(s)+'</li>';}).join('')+'</ol></div>'+
+  '</div></div></section>'+
+  '<section class="section alt"><div class="wrap"><div class="split">'+
+    '<div><h2>'+esc(c.whoHeading)+'</h2><p class="lead">'+esc(c.whoText)+'</p>'+
+     '</div>'+
+    '<div class="media" style="height:300px"><img src="'+esc(c.whoImage)+'" alt="Writing"></div>'+
+  '</div></div></section>'+
+  '<section class="section"><div class="wrap"><h2>Important dates (summary)</h2>'+
+    '<div style="max-width:640px;margin-top:14px">'+(D.dates.items||[]).map(function(x){
+      return '<div class="kv"><span>'+esc(x.title)+'</span><b>'+esc(x.date)+'</b></div>';
+    }).join('')+'</div></div></section>';
+}
+
+function pageSpeakers(){
+  var s=D.speakers;
+  return banner(s.eyebrow,s.title,s.intro)+
+   '<section class="section"><div class="wrap"><div class="grid g3">'+speakerCards()+'</div></div></section>';
+}
+
+function pageCommittee(){
+  var c=D.committee;
+  return banner('','Conference Committee',c.intro)+
+  '<section class="section"><div class="wrap">'+(c.groups||[]).map(function(g){
+    return '<div class="comm-group"><h3>'+esc(g.name)+'<span class="count" style="font-family:Inter;font-size:.75rem;font-weight:600;color:var(--muted)">'+(g.members||[]).length+'</span></h3>'+
+      '<div class="people">'+(g.members||[]).map(function(m){
+        return '<div class="person"><b>'+esc(m.name)+'</b><span>'+esc(m.role)+'</span></div>';
+      }).join('')+'</div></div>';
+  }).join('')+'</div></section>';
+}
+
+function pageVenue(){
+  var v=D.venue;
+  return banner('','Conference Venue','')+
+  '<section class="section"><div class="wrap"><h2>'+esc(v.mainHeading)+'</h2>'+
+    '<div class="split" style="margin-top:20px">'+
+      '<div><h3>'+esc(v.name)+'</h3><p>'+esc(v.description)+'</p>'+
+      '<h4>Address</h4><p>'+nl(v.address)+'</p>'+
+      '</div>'+
+      '<div class="media" style="height:330px"><img src="'+esc(v.image)+'" alt="Campus">'+
+      '<div class="media-cap"><h4>'+esc(v.imageCaption)+'</h4></div></div>'+
+    '</div>'+
+    '<div class="grid g2" style="margin-top:38px">'+
+      '<div class="card"><h3>'+esc(v.reachHeading)+'</h3>'+(v.reach||[]).map(function(r){
+        return '<div class="kv"><span><b style="font-family:Sora">'+esc(r.label)+'</b></span><span style="text-align:right;color:var(--muted)">'+esc(r.text)+'</span></div>';
+      }).join('')+'</div>'+
+      '<div class="card"><h3>'+esc(v.stayHeading)+'</h3>'+li(v.stay)+'</div>'+
+    '</div></div></section>'+
+  '<section class="section alt"><div class="wrap"><div class="split">'+
+    '<div class="media" style="height:300px"><img src="'+esc(v.cityImage)+'" alt="Hyderabad"></div>'+
+    '<div><h2>'+esc(v.cityHeading)+'</h2>'+paras(v.cityParas)+'</div>'+
+  '</div></div></section>'+
+  '<section class="section"><div class="wrap"><div class="split">'+
+    '<div><span class="pill active">'+esc(v.visitBadge)+'</span><h2 style="margin-top:12px">'+esc(v.visitTitle)+'</h2>'+paras(v.visitParas)+'</div>'+
+    '<div class="media" style="height:300px"><img src="'+esc(v.visitImage)+'" alt="Local visit"></div>'+
+  '</div></div></section>'+
+  '<section class="section alt"><div class="wrap"><div class="split">'+
+    '<div><h2>'+esc(v.facilitiesHeading)+'</h2><ul class="clean">'+(v.facilities||[]).map(function(f){
+      return '<li><b style="font-family:Sora">'+esc(f.label)+':</b> '+esc(f.text)+'</li>';
+    }).join('')+'</ul></div>'+
+    '<div class="media" style="height:300px"><img src="'+esc(v.facilitiesImage)+'" alt="Facilities"></div>'+
+  '</div></div></section>';
+}
+
+function pageRegistration(){
+  var r=D.registration;
+  return banner('','Registration Information',r.subtitle)+
+  '<section class="section"><div class="wrap"><h2>'+esc(r.feesHeading)+'</h2>'+
+    '<div class="grid g2" style="margin-top:22px">'+(r.feeGroups||[]).map(function(g){
+      return '<div class="card"><h3>'+esc(g.name)+(g.badge?'<span class="badge">'+esc(g.badge)+'</span>':'')+'</h3>'+
+        '<table class="fee-table">'+(g.rows||[]).map(function(x){
+          return '<tr><td>'+esc(x.label)+'</td><td>'+esc(x.amount)+'</td></tr>';
+        }).join('')+'</table></div>';
+    }).join('')+'</div>'+
+    '<div style="margin-top:22px">'+(r.feeNotes||[]).map(function(n){
+      return '<p class="small-note">* '+esc(n)+'</p>';}).join('')+'</div>'+
+  '</div></section>'+
+  '<section class="section alt"><div class="wrap"><div class="grid g2">'+
+    '<div><h2>'+esc(r.includesHeading)+'</h2>'+li(r.includes)+'</div>'+
+    '<div><h2>'+esc(r.paymentHeading)+'</h2>'+
+      '<div class="card" style="margin-bottom:16px"><h3>'+esc(r.onlineHeading)+'</h3><p>'+esc(r.onlineText)+'</p>'+
+        '<p style="margin:0"><a href="'+esc(D.meta.registrationFormUrl)+'" target="_blank" rel="noopener">'+esc(D.meta.registrationFormUrl)+'</a></p></div>'+
+      '<div class="card"><h3>'+esc(r.bankHeading)+'</h3>'+(r.bank||[]).map(function(b){
+        return '<div class="kv"><span>'+esc(b.label)+'</span><b>'+esc(b.value)+'</b></div>';
+      }).join('')+'</div>'+
+      '<p style="margin-top:18px"><a class="btn btn-gold" href="'+esc(D.meta.registrationFormUrl)+'" target="_blank" rel="noopener">'+esc(r.ctaLabel)+'</a></p>'+
+      '<p class="small-note">'+esc(r.ctaNote)+'</p></div>'+
+  '</div></div></section>'+
+  '<section class="section"><div class="wrap"><h2>'+esc(r.contactHeading)+'</h2>'+
+    '<div class="grid g2" style="margin-top:20px">'+(r.contacts||[]).map(function(c){
+      return '<div class="card"><h3>'+esc(c.name)+'</h3><p style="color:var(--muted);margin-bottom:6px">'+esc(c.title)+'</p>'+
+        '<p style="margin-bottom:8px">'+esc(c.affiliation)+'</p><p style="margin:0"><b>Mobile:</b> '+esc(c.mobile)+'</p></div>';
+    }).join('')+'</div></div></section>'+
+  '<section class="section alt"><div class="wrap"><h2>'+esc(r.faqHeading)+'</h2>'+
+    '<div style="margin-top:20px">'+(r.faqs||[]).map(function(f){
+      return '<div class="faq" data-acc><button type="button"><span>'+esc(f.q)+'</span><span class="chev">&#9660;</span></button>'+
+        '<div class="panel">'+esc(f.a)+'</div></div>';
+    }).join('')+'</div></div></section>';
+}
+
+function pageSponsorship(){
+  var s=D.sponsorship;
+  return banner('','Call for Sponsorship',s.intro)+
+  '<section class="section"><div class="wrap"><h2>'+esc(s.benefitsHeading)+'</h2>'+
+    '<div class="grid g4" style="margin-top:22px">'+(s.benefits||[]).map(function(b){
+      return '<div class="card"><h3>'+esc(b.title)+'</h3><p style="color:var(--muted);font-size:.94rem">'+esc(b.text)+'</p></div>';
+    }).join('')+'</div></div></section>'+
+  '<section class="section alt"><div class="wrap"><h2>'+esc(s.oppsHeading)+'</h2>'+
+    '<p class="lead">'+esc(s.oppsText)+'</p></div></section>'+
+  '<section class="section"><div class="wrap"><h2>'+esc(s.contactHeading)+'</h2>'+
+    '<div class="grid g2" style="margin-top:20px">'+(s.contacts||[]).map(function(c){
+      return '<div class="card"><h3>'+esc(c.name)+'</h3><p style="color:var(--muted);margin-bottom:6px">'+esc(c.title)+'</p>'+
+        '<p style="margin-bottom:8px">'+esc(c.affiliation)+'</p><p style="margin:0">'+esc(c.mobile)+'</p></div>';
+    }).join('')+'</div></div></section>'+
+  '<section class="section alt"><div class="wrap center">'+
+    '<h2>'+esc(s.ctaTitle)+'</h2><p class="lead">'+esc(s.ctaText)+'</p>'+
+    '<p style="margin-top:18px"><a class="btn btn-gold" href="mailto:'+esc(D.footer.email)+'">'+esc(s.ctaLabel)+'</a></p>'+
+  '</div></section>';
+}
+
+var ROUTES = {
+  '': pageHome, 'home': pageHome, 'about': pageAbout, 'call-for-papers': pageCfp,
+  'important-dates': pageDates, 'speakers': pageSpeakers, 'committee': pageCommittee,
+  'venue': pageVenue, 'registration': pageRegistration, 'sponsorship': pageSponsorship
+};
+
+var CURRENT = 'home';
+function go(path){
+  CURRENT = (path && ROUTES[path]) ? path : 'home';
+  try{ history.replaceState(null,'','#/'+(CURRENT==='home'?'':CURRENT)); }catch(e){}
+  document.getElementById('nav').classList.remove('open');
+  render(false);
+}
+document.addEventListener('click', function(e){
+  var a = e.target.closest ? e.target.closest('[data-go]') : null;
+  if(!a) return;
+  e.preventDefault(); e.stopPropagation();
+  go(a.getAttribute('data-go'));
+});
+document.addEventListener('keydown', function(e){
+  if(e.key!=='Enter' && e.key!==' ') return;
+  var a = e.target.closest ? e.target.closest('[data-go]') : null;
+  if(!a) return;
+  e.preventDefault(); go(a.getAttribute('data-go'));
+});
+function render(keepScroll){
+  var y = window.scrollY;
+  var key = CURRENT;
+  var fn = ROUTES[key] || pageHome;
+  document.getElementById('app').innerHTML = fn();
+  renderChrome();
+  document.querySelectorAll('[data-acc] button').forEach(function(b){
+    b.onclick = function(){ b.parentElement.classList.toggle('open'); };
+  });
+  document.getElementById('burger').onclick = function(){ document.getElementById('nav').classList.toggle('open'); };
+  document.title = (key? (D.nav.filter(function(n){return n.path===key;})[0]||{label:'Home'}).label+' | ' : '') + D.meta.shortName;
+  if(keepScroll) window.scrollTo(0,y); else window.scrollTo(0,0);
+}
+try{ var h=(location.hash||'').replace(/^#\/?/,''); if(h && ROUTES[h]) CURRENT=h; }catch(e){}
+
+/* =====================================================================
+   BUILT-IN EDITOR
+   ===================================================================== */
+function get(p){ return p.split('.').reduce(function(o,k){ return o==null?o:o[k]; }, D); }
+function set(p,v){
+  var ks=p.split('.'), o=D;
+  for(var i=0;i<ks.length-1;i++) o=o[ks[i]];
+  o[ks[ks.length-1]]=v;
+}
+
+var SCHEMA = {
+  "General": [
+    {p:'meta.shortName',   l:'Conference short name', t:'text'},
+    {p:'meta.tagline',     l:'Header tagline',        t:'text'},
+    {p:'meta.fullTitle',   l:'Full conference title', t:'area'},
+    {p:'meta.conferenceDates', l:'Conference dates (shown everywhere)', t:'text'},
+    {p:'meta.venueShort',  l:'Venue (short)',         t:'text'},
+    {p:'meta.registrationFormUrl', l:'Registration form URL', t:'text'},
+    {p:'admin.password',   l:'Editor password',       t:'text'}
+  ],
+  "Important dates": [
+    {p:'dates.eyebrow',    l:'Eyebrow',  t:'text'},
+    {p:'dates.title',      l:'Page title', t:'text'},
+    {p:'dates.intro',      l:'Intro text', t:'area'},
+    {p:'dates.noticeTitle',l:'Notice heading', t:'text'},
+    {p:'dates.noticeText', l:'Notice text', t:'area'},
+    {p:'dates.items',      l:'Milestones', t:'objs', tpl:{title:'New milestone',date:'',status:'Scheduled'},
+     f:[{k:'title',l:'Milestone',t:'text'},{k:'date',l:'Date',t:'text'},
+        {k:'status',l:'Status',t:'select',o:['Active Period','Scheduled','Deadline Passed']}]}
+  ],
+  "Home": [
+    {p:'home.heroEyebrow', l:'Hero eyebrow', t:'text'},
+    {p:'home.heroTitle',   l:'Hero title', t:'text'},
+    {p:'home.heroSubtitle',l:'Hero subtitle', t:'area'},
+    {p:'home.welcomeHeading', l:'Welcome heading', t:'text'},
+    {p:'home.welcomeParas',l:'Welcome paragraphs (one per line)', t:'list'},
+    {p:'home.welcomeImage',l:'Welcome image URL', t:'text'},
+    {p:'home.welcomeImageTitle', l:'Image caption title', t:'text'},
+    {p:'home.welcomeImageSub',   l:'Image caption sub', t:'text'},
+    {p:'home.quickCards',  l:'Quick cards', t:'objs', tpl:{title:'',text:'',linkLabel:'',linkPath:'about'},
+     f:[{k:'title',l:'Title',t:'text'},{k:'text',l:'Text',t:'area'},{k:'linkLabel',l:'Link label',t:'text'},{k:'linkPath',l:'Link path',t:'text'}]},
+    {p:'home.areasHeading',l:'Research areas heading', t:'text'},
+    {p:'home.areas',       l:'Research areas', t:'objs', tpl:{title:'',desc:'',image:''},
+     f:[{k:'title',l:'Title',t:'text'},{k:'desc',l:'Description',t:'area'},{k:'image',l:'Image URL',t:'text'}]},
+    {p:'home.contactHeading', l:'Contact heading', t:'text'},
+    {p:'home.contactIntro', l:'Contact intro', t:'area'},
+    {p:'home.contactEmail', l:'Contact email', t:'text'},
+    {p:'home.contactAddress', l:'Contact address', t:'area'},
+    {p:'home.contactImage', l:'Contact image URL', t:'text'}
+  ],
+  "About": [
+    {p:'about.uniHeading', l:'University heading', t:'text'},
+    {p:'about.uniName',    l:'University name', t:'text'},
+    {p:'about.uniSub',     l:'University summary', t:'area'},
+    {p:'about.uniImage',   l:'University image URL', t:'text'},
+    {p:'about.uniParas',   l:'University paragraphs (one per line)', t:'list'},
+    {p:'about.deptHeading',l:'Department heading', t:'text'},
+    {p:'about.deptName',   l:'Department name', t:'text'},
+    {p:'about.deptEstablished', l:'Established', t:'text'},
+    {p:'about.deptPrograms',l:'Programs offered', t:'text'},
+    {p:'about.deptImage',  l:'Department image URL', t:'text'},
+    {p:'about.deptParas',  l:'Department paragraphs (one per line)', t:'list'},
+    {p:'about.confHeading',l:'Conference heading', t:'text'},
+    {p:'about.confImage',  l:'Conference image URL', t:'text'},
+    {p:'about.confParas',  l:'Conference paragraphs (one per line)', t:'list'},
+    {p:'about.organizedBy',l:'Organized by', t:'area'}
+  ],
+  "Call for papers": [
+    {p:'cfp.heroImage',    l:'Hero image URL', t:'text'},
+    {p:'cfp.subHeading',   l:'Hero caption title', t:'text'},
+    {p:'cfp.subText',      l:'Hero caption sub', t:'text'},
+    {p:'cfp.intro',        l:'Intro paragraphs (one per line)', t:'list'},
+    {p:'cfp.tracksHeading',l:'Tracks heading', t:'text'},
+    {p:'cfp.tracks',       l:'Research tracks', t:'objs', tpl:{name:'New track',topics:[]},
+     f:[{k:'name',l:'Track name',t:'text'},{k:'topics',l:'Topics (one per line)',t:'list'}]},
+    {p:'cfp.guidelinesHeading', l:'Guidelines heading', t:'text'},
+    {p:'cfp.guidelines',   l:'Guidelines (one per line)', t:'list'},
+    {p:'cfp.processHeading', l:'Process heading', t:'text'},
+    {p:'cfp.processIntro', l:'Process intro', t:'area'},
+    {p:'cfp.steps',        l:'Steps (one per line)', t:'list'},
+    {p:'cfp.whoHeading',   l:'Who can attend heading', t:'text'},
+    {p:'cfp.whoText',      l:'Who can attend text', t:'area'},
+    {p:'cfp.whoImage',     l:'Image URL', t:'text'}
+  ],
+  "Speakers": [
+    {p:'speakers.eyebrow', l:'Eyebrow', t:'text'},
+    {p:'speakers.title',   l:'Heading', t:'text'},
+    {p:'speakers.intro',   l:'Intro', t:'area'},
+    {p:'speakers.items',   l:'Speakers', t:'objs', tpl:{initials:'NA',tag:'Keynote',name:'',role:'',expertise:'',note:''},
+     f:[{k:'name',l:'Name',t:'text'},{k:'initials',l:'Initials',t:'text'},{k:'tag',l:'Tag',t:'text'},
+        {k:'role',l:'Role / affiliation',t:'text'},{k:'expertise',l:'Expertise',t:'text'},{k:'note',l:'Note',t:'text'}]}
+  ],
+  "Committee": [
+    {p:'committee.intro',  l:'Intro', t:'area'},
+    {p:'committee.groups', l:'Committee groups', t:'groups'}
+  ],
+  "Venue": [
+    {p:'venue.mainHeading',l:'Main heading', t:'text'},
+    {p:'venue.name',       l:'Venue name', t:'text'},
+    {p:'venue.description',l:'Description', t:'area'},
+    {p:'venue.address',    l:'Address', t:'area'},
+    {p:'venue.image',      l:'Venue image URL', t:'text'},
+    {p:'venue.imageCaption', l:'Image caption', t:'text'},
+    {p:'venue.reach',      l:'How to reach', t:'objs', tpl:{label:'',text:''},
+     f:[{k:'label',l:'Label',t:'text'},{k:'text',l:'Detail',t:'text'}]},
+    {p:'venue.stay',       l:'Nearby stays (one per line)', t:'list'},
+    {p:'venue.cityImage',  l:'City image URL', t:'text'},
+    {p:'venue.cityParas',  l:'About the city (one per line)', t:'list'},
+    {p:'venue.visitBadge', l:'Local visit badge', t:'text'},
+    {p:'venue.visitTitle', l:'Local visit title', t:'text'},
+    {p:'venue.visitImage', l:'Local visit image URL', t:'text'},
+    {p:'venue.visitParas', l:'Local visit paragraphs (one per line)', t:'list'},
+    {p:'venue.facilities', l:'Facilities', t:'objs', tpl:{label:'',text:''},
+     f:[{k:'label',l:'Facility',t:'text'},{k:'text',l:'Detail',t:'text'}]},
+    {p:'venue.facilitiesImage', l:'Facilities image URL', t:'text'}
+  ],
+  "Registration": [
+    {p:'registration.subtitle', l:'Subtitle', t:'area'},
+    {p:'registration.feeGroups', l:'Fee groups', t:'objs', tpl:{name:'',badge:'',rows:[]},
+     f:[{k:'name',l:'Group name',t:'text'},{k:'badge',l:'Badge (optional)',t:'text'},
+        {k:'rows',l:'Fees — one per line as: Label | Amount',t:'pairs',keys:['label','amount']}]},
+    {p:'registration.feeNotes', l:'Fee notes (one per line)', t:'list'},
+    {p:'registration.includes', l:'Registration includes (one per line)', t:'list'},
+    {p:'registration.onlineText', l:'Online registration text', t:'text'},
+    {p:'registration.bank', l:'Bank details — one per line as: Label | Value', t:'pairs', keys:['label','value']},
+    {p:'registration.ctaLabel', l:'CTA button label', t:'text'},
+    {p:'registration.ctaNote',  l:'CTA note', t:'text'},
+    {p:'registration.contacts', l:'Registration contacts', t:'objs', tpl:{name:'',title:'',affiliation:'',mobile:''},
+     f:[{k:'name',l:'Name',t:'text'},{k:'title',l:'Designation',t:'text'},{k:'affiliation',l:'Affiliation',t:'area'},{k:'mobile',l:'Mobile',t:'text'}]},
+    {p:'registration.faqs', l:'FAQs', t:'objs', tpl:{q:'',a:''},
+     f:[{k:'q',l:'Question',t:'text'},{k:'a',l:'Answer',t:'area'}]}
+  ],
+  "Sponsorship": [
+    {p:'sponsorship.intro', l:'Intro', t:'area'},
+    {p:'sponsorship.benefits', l:'Benefits', t:'objs', tpl:{title:'',text:''},
+     f:[{k:'title',l:'Title',t:'text'},{k:'text',l:'Text',t:'area'}]},
+    {p:'sponsorship.oppsText', l:'Opportunities text', t:'area'},
+    {p:'sponsorship.contacts', l:'Sponsorship contacts', t:'objs', tpl:{name:'',title:'',affiliation:'',mobile:''},
+     f:[{k:'name',l:'Name',t:'text'},{k:'title',l:'Designation',t:'text'},{k:'affiliation',l:'Affiliation',t:'area'},{k:'mobile',l:'Phone',t:'text'}]},
+    {p:'sponsorship.ctaTitle', l:'CTA title', t:'text'},
+    {p:'sponsorship.ctaText',  l:'CTA text', t:'area'},
+    {p:'sponsorship.ctaLabel', l:'CTA button label', t:'text'}
+  ],
+  "Footer": [
+    {p:'footer.about', l:'Footer description', t:'area'},
+    {p:'footer.line1', l:'Line 1 (dates)', t:'text'},
+    {p:'footer.line2', l:'Line 2 (venue)', t:'text'},
+    {p:'footer.contactAddress', l:'Contact address', t:'area'},
+    {p:'footer.email', l:'Email', t:'text'},
+    {p:'footer.mobile', l:'Mobile', t:'text'},
+    {p:'footer.copyright', l:'Copyright line', t:'text'},
+    {p:'footer.organizedBy', l:'Organized by line', t:'text'}
+  ],
+  "Raw JSON": [{t:'raw'}]
+};
+
+var activeTab = 'General';
+
+function field(def, val, onChange){
+  var w=document.createElement('div'); w.className='fld';
+  if(def.l){ var lb=document.createElement('label'); lb.textContent=def.l; w.appendChild(lb); }
+  var el;
+  if(def.t==='select'){
+    el=document.createElement('select');
+    (def.o||[]).forEach(function(o){var op=document.createElement('option');op.value=o;op.textContent=o;el.appendChild(op);});
+    el.value=val||'';
+  } else if(def.t==='area'||def.t==='list'||def.t==='pairs'){
+    el=document.createElement('textarea');
+    if(def.t==='list') el.value=(val||[]).join('\n');
+    else if(def.t==='pairs') el.value=(val||[]).map(function(o){return o[def.keys[0]]+' | '+o[def.keys[1]];}).join('\n');
+    else el.value=val||'';
+    if(def.t!=='area') el.style.minHeight='120px';
+  } else {
+    el=document.createElement('input'); el.type='text'; el.value=val==null?'':val;
+  }
+  el.oninput=el.onchange=function(){
+    var v=el.value;
+    if(def.t==='list') v=v.split('\n').map(function(s){return s.trim();}).filter(function(s){return s.length;});
+    if(def.t==='pairs') v=v.split('\n').filter(function(s){return s.trim().length;}).map(function(s){
+      var parts=s.split('|'); var o={}; o[def.keys[0]]=(parts[0]||'').trim(); o[def.keys[1]]=(parts.slice(1).join('|')||'').trim(); return o;
+    });
+    onChange(v); render(true);
+  };
+  w.appendChild(el); return w;
+}
+
+function objsEditor(def){
+  var box=document.createElement('div');
+  var lab=document.createElement('label'); lab.style.cssText='display:block;font-size:.78rem;font-weight:700;color:var(--deep);margin-bottom:8px;font-family:Sora';
+  lab.textContent=def.l; box.appendChild(lab);
+  var arr=get(def.p)||[];
+  arr.forEach(function(item,i){
+    var rb=document.createElement('div'); rb.className='rowbox';
+    var rh=document.createElement('div'); rh.className='rh';
+    rh.innerHTML='<b>#'+(i+1)+'</b>';
+    var ctr=document.createElement('div');
+    ['\u2191','\u2193','Remove'].forEach(function(t,k){
+      var b=document.createElement('button'); b.className='mini'+(k===2?' danger':''); b.textContent=t;
+      b.onclick=function(){
+        if(k===0&&i>0){ arr.splice(i-1,0,arr.splice(i,1)[0]); }
+        else if(k===1&&i<arr.length-1){ arr.splice(i+1,0,arr.splice(i,1)[0]); }
+        else if(k===2){ if(confirm('Remove this entry?')) arr.splice(i,1); else return; }
+        buildBody(); render(true);
+      };
+      ctr.appendChild(b);
+    });
+    rh.appendChild(ctr); rb.appendChild(rh);
+    def.f.forEach(function(fd){
+      rb.appendChild(field(fd, item[fd.k], function(v){ item[fd.k]=v; }));
+    });
+    box.appendChild(rb);
+  });
+  var add=document.createElement('button'); add.className='mini'; add.textContent='+ Add entry';
+  add.onclick=function(){ arr.push(JSON.parse(JSON.stringify(def.tpl))); buildBody(); render(true); };
+  box.appendChild(add);
+  return box;
+}
+
+function groupsEditor(def){
+  var box=document.createElement('div'); var arr=get(def.p)||[];
+  var lab=document.createElement('label'); lab.style.cssText='display:block;font-size:.78rem;font-weight:700;color:var(--deep);margin-bottom:8px;font-family:Sora';
+  lab.textContent=def.l; box.appendChild(lab);
+  arr.forEach(function(g,i){
+    var rb=document.createElement('div'); rb.className='rowbox';
+    var rh=document.createElement('div'); rh.className='rh'; rh.innerHTML='<b>'+esc(g.name||('Group '+(i+1)))+'</b>';
+    var ctr=document.createElement('div');
+    ['\u2191','\u2193','Remove'].forEach(function(t,k){
+      var b=document.createElement('button'); b.className='mini'+(k===2?' danger':''); b.textContent=t;
+      b.onclick=function(){
+        if(k===0&&i>0) arr.splice(i-1,0,arr.splice(i,1)[0]);
+        else if(k===1&&i<arr.length-1) arr.splice(i+1,0,arr.splice(i,1)[0]);
+        else if(k===2){ if(confirm('Remove "'+(g.name||'')+'" and all its members?')) arr.splice(i,1); else return; }
+        buildBody(); render(true);
+      };
+      ctr.appendChild(b);
+    });
+    rh.appendChild(ctr); rb.appendChild(rh);
+    rb.appendChild(field({l:'Group name',t:'text'}, g.name, function(v){ g.name=v; }));
+    rb.appendChild(field({l:'Members — one per line as: Name | Designation',t:'pairs',keys:['name','role']}, g.members, function(v){ g.members=v; }));
+    box.appendChild(rb);
+  });
+  var add=document.createElement('button'); add.className='mini'; add.textContent='+ Add group';
+  add.onclick=function(){ arr.push({name:'New group',members:[]}); buildBody(); render(true); };
+  box.appendChild(add);
+  return box;
+}
+
+function buildBody(){
+  var body=document.getElementById('admBody'); body.innerHTML='';
+  var note=document.createElement('div'); note.className='adm-note';
+  note.textContent='Edits update the page instantly but live only in this browser tab. Click "Download updated site" and replace your index.html to publish them.';
+  body.appendChild(note);
+  (SCHEMA[activeTab]||[]).forEach(function(def){
+    if(def.t==='raw'){
+      var w=document.createElement('div'); w.className='fld';
+      var lb=document.createElement('label'); lb.textContent='All content as JSON (advanced)'; w.appendChild(lb);
+      var ta=document.createElement('textarea'); ta.style.minHeight='420px'; ta.style.fontFamily='ui-monospace,Menlo,monospace'; ta.style.fontSize='.78rem';
+      ta.value=JSON.stringify(D,null,2); w.appendChild(ta);
+      var b=document.createElement('button'); b.className='mini'; b.textContent='Apply JSON';
+      b.onclick=function(){
+        try{ var o=JSON.parse(ta.value); Object.keys(D).forEach(function(k){delete D[k];}); Object.keys(o).forEach(function(k){D[k]=o[k];}); render(true); buildBody(); toast('JSON applied'); }
+        catch(e){ alert('That is not valid JSON: '+e.message); }
+      };
+      w.appendChild(b); body.appendChild(w); return;
+    }
+    if(def.t==='objs'){ body.appendChild(objsEditor(def)); return; }
+    if(def.t==='groups'){ body.appendChild(groupsEditor(def)); return; }
+    body.appendChild(field(def, get(def.p), function(v){ set(def.p,v); }));
+  });
+}
+
+function buildTabs(){
+  var t=document.getElementById('admTabs'); t.innerHTML='';
+  Object.keys(SCHEMA).forEach(function(name){
+    var b=document.createElement('button'); b.textContent=name;
+    if(name===activeTab) b.className='on';
+    b.onclick=function(){ activeTab=name; buildTabs(); buildBody(); document.getElementById('admBody').scrollTop=0; };
+    t.appendChild(b);
+  });
+}
+
+var unlocked=false;
+function openAdmin(){
+  if(!unlocked){
+    var p=prompt('Enter the editor password:');
+    if(p===null) return;
+    if(p!==D.admin.password){ alert('Wrong password.'); return; }
+    unlocked=true;
+  }
+  document.getElementById('admin').classList.add('open');
+  document.getElementById('admScrim').classList.add('open');
+  buildTabs(); buildBody();
+}
+function closeAdmin(){
+  document.getElementById('admin').classList.remove('open');
+  document.getElementById('admScrim').classList.remove('open');
+}
+document.getElementById('admClose').onclick=closeAdmin;
+document.getElementById('admScrim').onclick=closeAdmin;
+document.addEventListener('keydown',function(e){
+  if(e.key==='Escape') closeAdmin();
+  if(e.ctrlKey&&e.shiftKey&&(e.key==='E'||e.key==='e')){ e.preventDefault(); openAdmin(); }
+});
+
+document.getElementById('admJson').onclick=function(){
+  var txt=JSON.stringify(D,null,2);
+  if(navigator.clipboard&&navigator.clipboard.writeText){
+    navigator.clipboard.writeText(txt).then(function(){toast('Content copied as JSON');},function(){window.prompt('Copy this JSON:',txt);});
+  } else window.prompt('Copy this JSON:',txt);
+};
+
+document.getElementById('admSave').onclick=function(){
+  var marker='<script id="site-data" type="application/json">';
+  var i=ORIGINAL_HTML.indexOf(marker);
+  if(i<0){ alert('Could not locate the content block.'); return; }
+  var open=i+marker.length;
+  var close=ORIGINAL_HTML.indexOf('<'+'/script>',open);
+  var out=ORIGINAL_HTML.slice(0,open)+'\n'+JSON.stringify(D,null,2)+'\n'+ORIGINAL_HTML.slice(close);
+  var blob=new Blob([out],{type:'text/html'});
+  var a=document.createElement('a');
+  a.href=URL.createObjectURL(blob); a.download='index.html';
+  document.body.appendChild(a); a.click(); document.body.removeChild(a);
+  setTimeout(function(){URL.revokeObjectURL(a.href);},1500);
+  toast('index.html downloaded — upload it to replace your site');
+};
+
+render(false);
+</script>
+</body>
+</html>

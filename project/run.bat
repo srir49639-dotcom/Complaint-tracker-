@@ -1,0 +1,3 @@
+@echo off
+echo Launching Smart Complaint Tracker Unified Portal...
+start javaw -cp bin Main

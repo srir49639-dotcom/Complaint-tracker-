@@ -1,0 +1,13 @@
+ASG-40001	CMP-101	DPT-04	STF-103	ADMIN-01	1788250189592	Assigned via optimal workload balancer.	true
+ASG-40002	CMP-108	DPT-05	STF-104	ADMIN-01	1788250189617	Assigned via optimal workload balancer.	true
+ASG-40003	CMP-116	DPT-10	STF-105	ADMIN-01	1788250189633	Assigned via optimal workload balancer.	true
+ASG-40004	CMP-124	DPT-04	STF-103	ADMIN-01	1788250189647	Assigned via optimal workload balancer.	true
+ASG-40005	CMP-140	DPT-02	STF-101	ADMIN-01	1788250189657	Assigned via optimal workload balancer.	true
+ASG-40006	CMP-148	DPT-05	STF-104	ADMIN-01	1788250189666	Assigned via optimal workload balancer.	true
+ASG-40007	CMP-156	DPT-10	STF-105	ADMIN-01	1788250189684	Assigned via optimal workload balancer.	true
+ASG-40008	CMP-164	DPT-04	STF-103	ADMIN-01	1788250189686	Assigned via optimal workload balancer.	true
+ASG-40009	CMP-180	DPT-02	STF-101	ADMIN-01	1788250189720	Assigned via optimal workload balancer.	true
+ASG-40010	CMP-188	DPT-05	STF-104	ADMIN-01	1788250189730	Assigned via optimal workload balancer.	true
+ASG-40011	CMP-196	DPT-10	STF-105	ADMIN-01	1788250189737	Assigned via optimal workload balancer.	true
+ASG-40012	CMP-204	DPT-04	STF-103	ADMIN-01	1788250189746	Assigned via optimal workload balancer.	true
+ASG-40001	CMP-101	DPT-04	STF-103	ADMIN-01	1788320819727	Assigned via optimal workload balancer.	true

@@ -1,0 +1,6 @@
+TEST-CUST-999	persistence_user_1788322704906	e48ba32da12dc4b6fd523327814ab2201e5b285fb3430f66ec6ec29726f8d5f3	Persistence Test User	persist@test.com	+1-555-9999	Test Lab	1788322704959
+CUST-01	john_doe	88b1e2a99b2867e7f02b004b0d7e373914f40304a6ac7493389c47aab5df81fa	John Doe	john@university.edu	+1-555-1101	Hostel Block A, Room 302	1785730741203
+CUST-02	alice_smith	88b1e2a99b2867e7f02b004b0d7e373914f40304a6ac7493389c47aab5df81fa	Alice Smith	alice@university.edu	+1-555-1102	Hostel Block B, Room 104	1785730741214
+CUST-03	robert_brown	88b1e2a99b2867e7f02b004b0d7e373914f40304a6ac7493389c47aab5df81fa	Robert Brown	robert@university.edu	+1-555-1103	Hostel Block C, Room 215	1785730741216
+CUST-04	emily_clark	88b1e2a99b2867e7f02b004b0d7e373914f40304a6ac7493389c47aab5df81fa	Emily Clark	emily@university.edu	+1-555-1104	Engineering Block 2, Lab 4	1785730741219
+CUST-05	michael_scott	88b1e2a99b2867e7f02b004b0d7e373914f40304a6ac7493389c47aab5df81fa	Michael Scott	michael@university.edu	+1-555-1105	Management Tower, Office 12	1785730741224

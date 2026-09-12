@@ -1,0 +1,25 @@
+#DepartmentID	Name	HeadName	Email	Phone	Location	ParentDeptID
+DEPT-ACAD	Academic Affairs	Dr. Sharma	academic@university.edu	+91-9876543210	Main Admin Block	ROOT
+DEPT-HOST	Hostel Management	Col. Rathore	hostel@university.edu	+91-9876543211	Hostel Office Block	ROOT
+DEPT-ELEC	Electrical Maintenance	Eng. Verma	electrical@university.edu	+91-9876543212	Power Substation	DEPT-ESTA
+DEPT-WATR	Water & Sanitation	Eng. Kulkarni	water@university.edu	+91-9876543213	Utility Center	DEPT-ESTA
+DEPT-IT	IT & Network Services	Dr. Alan	it-support@university.edu	+91-9876543214	Computing Center 2nd Floor	ROOT
+DEPT-TRNS	Transport Department	Mr. Yadav	transport@university.edu	+91-9876543215	Transport Depot	DEPT-ADMN
+DEPT-SECU	Campus Security	Capt. Singh	security@university.edu	+91-9876543216	Main Gate Complex	ROOT
+DEPT-LIBR	Central Library	Dr. Banerjee	library@university.edu	+91-9876543217	Central Library Block	DEPT-ACAD
+DEPT-MESS	Catering & Mess	Mr. Pillai	mess@university.edu	+91-9876543218	Dining Hall 1	DEPT-HOST
+DEPT-FINA	Finance & Accounts	Mr. Agarwal	finance@university.edu	+91-9876543219	Admin Ground Floor	ROOT
+DEPT-ESTA	Estate & Infrastructure	Chief Eng. Gupta	estate@university.edu	+91-9876543220	Estate Complex	ROOT
+DEPT-ADMN	General Administration	Registrar Nair	admin@university.edu	+91-9876543221	Central Registry	ROOT
+DPT-01	Administration	General campus administration and executive operations		Dr. Vance	50	0	48	DPT-01
+DPT-02	Internet / Wi-Fi	Network infrastructure, routers, and campus internet		Eng. David	60	0	24	DPT-01
+DPT-03	Electricity / Power	Power distribution, substations, lighting, and wiring		Eng. Marcus	50	0	12	DPT-01
+DPT-04	Water & Plumbing	Plumbing pipelines, water purification, and sanitation		Eng. Walter	50	0	24	DPT-01
+DPT-05	Hostel Facilities	Hostel room maintenance, furniture, and resident welfare		Warden Sarah	80	0	48	DPT-01
+DPT-06	Academic / Classroom	Lecture halls, smart boards, projector equipment, grading		Dean Thompson	60	0	36	DPT-01
+DPT-07	Finance & Fees	Tuition fees, scholarship disbursement, and accounts		Officer Rachel	40	0	72	DPT-01
+DPT-08	Security & Access	Campus security, gate access control, CCTV surveillance		Capt. Miller	50	0	8	DPT-01
+DPT-09	Transport / Bus	Campus shuttles, transit scheduling, and fleet maintenance		Supervisor Paul	40	0	24	DPT-01
+DPT-10	Library Services	Digital catalogue, book returns, reading room facilities		Librarian Elena	40	0	48	DPT-01
+DPT-11	Food Services / Canteen	Dining hall hygiene, meal quality, and cafeteria vending		Chef Anthony	50	0	12	DPT-01
+DPT-12	Infrastructure & Maintenance	Civil works, elevators, HVAC air conditioning, roofing		Eng. Brian	70	0	48	DPT-01

@@ -1,0 +1,45 @@
+NTF-5001	TEST-CUST-999	CUSTOMER	CMP-101	Complaint Submitted	Your complaint CMP-2026-000101 has been registered successfully.	1788244254518	false
+NTF-5002	ORG_ADMIN	ADMIN	CMP-101	New Complaint Arrived	Complaint CMP-2026-000101 (Water & Plumbing) submitted by Persistence Test User.	1788244254534	false
+NTF-5003	TEST-CUST-999	CUSTOMER	CMP-101	Status Updated	Your complaint CMP-2026-000101 status is now In Progress.	1788244254541	false
+NTF-5001	TEST-CUST-999	CUSTOMER	CMP-101	Complaint Submitted	Your complaint CMP-2026-000101 has been registered successfully.	1788244330625	false
+NTF-5002	ORG_ADMIN	ADMIN	CMP-101	New Complaint Arrived	Complaint CMP-2026-000101 (Water & Plumbing) submitted by Persistence Test User.	1788244330642	false
+NTF-5003	TEST-CUST-999	CUSTOMER	CMP-101	Status Updated	Your complaint CMP-2026-000101 status is now In Progress.	1788244330649	false
+NTF-5001	TEST-CUST-999	CUSTOMER	CMP-101	Complaint Assigned	Your complaint CMP-2026-000101 has been assigned to Walter White.	1788250189606	false
+NTF-5002	STF-103	STAFF	CMP-101	New Assignment	Complaint CMP-2026-000101 has been assigned to you.	1788250189614	false
+NTF-5003	CUST-03	CUSTOMER	CMP-108	Complaint Assigned	Your complaint CMP-2026-000108 has been assigned to Sarah Jenkins.	1788250189624	false
+NTF-5004	STF-104	STAFF	CMP-108	New Assignment	Complaint CMP-2026-000108 has been assigned to you.	1788250189624	false
+NTF-5005	CUST-01	CUSTOMER	CMP-116	Complaint Assigned	Your complaint CMP-2026-000116 has been assigned to Elena Rostova.	1788250189633	false
+NTF-5006	STF-105	STAFF	CMP-116	New Assignment	Complaint CMP-2026-000116 has been assigned to you.	1788250189633	false
+NTF-5007	CUST-04	CUSTOMER	CMP-124	Complaint Assigned	Your complaint CMP-2026-000124 has been assigned to Walter White.	1788250189648	false
+NTF-5008	STF-103	STAFF	CMP-124	New Assignment	Complaint CMP-2026-000124 has been assigned to you.	1788250189650	false
+NTF-5009	CUST-05	CUSTOMER	CMP-140	Complaint Assigned	Your complaint CMP-2026-000140 has been assigned to David Kumar.	1788250189657	false
+NTF-5010	STF-101	STAFF	CMP-140	New Assignment	Complaint CMP-2026-000140 has been assigned to you.	1788250189660	false
+NTF-5011	CUST-03	CUSTOMER	CMP-148	Complaint Assigned	Your complaint CMP-2026-000148 has been assigned to Sarah Jenkins.	1788250189666	false
+NTF-5012	STF-104	STAFF	CMP-148	New Assignment	Complaint CMP-2026-000148 has been assigned to you.	1788250189666	false
+NTF-5013	CUST-01	CUSTOMER	CMP-156	Complaint Assigned	Your complaint CMP-2026-000156 has been assigned to Elena Rostova.	1788250189686	false
+NTF-5014	STF-105	STAFF	CMP-156	New Assignment	Complaint CMP-2026-000156 has been assigned to you.	1788250189686	false
+NTF-5015	CUST-04	CUSTOMER	CMP-164	Complaint Assigned	Your complaint CMP-2026-000164 has been assigned to Walter White.	1788250189697	false
+NTF-5016	STF-103	STAFF	CMP-164	New Assignment	Complaint CMP-2026-000164 has been assigned to you.	1788250189697	false
+NTF-5017	CUST-05	CUSTOMER	CMP-180	Complaint Assigned	Your complaint CMP-2026-000180 has been assigned to David Kumar.	1788250189722	false
+NTF-5018	STF-101	STAFF	CMP-180	New Assignment	Complaint CMP-2026-000180 has been assigned to you.	1788250189722	false
+NTF-5019	CUST-03	CUSTOMER	CMP-188	Complaint Assigned	Your complaint CMP-2026-000188 has been assigned to Sarah Jenkins.	1788250189732	false
+NTF-5020	STF-104	STAFF	CMP-188	New Assignment	Complaint CMP-2026-000188 has been assigned to you.	1788250189732	false
+NTF-5021	CUST-01	CUSTOMER	CMP-196	Complaint Assigned	Your complaint CMP-2026-000196 has been assigned to Elena Rostova.	1788250189740	false
+NTF-5022	STF-105	STAFF	CMP-196	New Assignment	Complaint CMP-2026-000196 has been assigned to you.	1788250189740	false
+NTF-5023	CUST-04	CUSTOMER	CMP-204	Complaint Assigned	Your complaint CMP-2026-000204 has been assigned to Walter White.	1788250189746	false
+NTF-5024	STF-103	STAFF	CMP-204	New Assignment	Complaint CMP-2026-000204 has been assigned to you.	1788250189746	false
+NTF-5025	CUST-05	CUSTOMER	CMP-205	Status Updated	Your complaint CMP-2026-000205 status is now Closed.	1788250224025	false
+NTF-5001	TEST-CUST-999	CUSTOMER	CMP-101	Complaint Submitted	Your complaint CMP-2026-000101 has been registered successfully.	1788250672965	false
+NTF-5002	ORG_ADMIN	ADMIN	CMP-101	New Complaint Arrived	Complaint CMP-2026-000101 (Water & Plumbing) submitted by Persistence Test User.	1788250672974	false
+NTF-5003	TEST-CUST-999	CUSTOMER	CMP-101	Status Updated	Your complaint CMP-2026-000101 status is now In Progress.	1788250672992	false
+NTF-5001	TEST-CUST-999	CUSTOMER	CMP-101	Complaint Submitted	Your complaint CMP-2026-000101 has been registered successfully.	1788251193833	false
+NTF-5002	ORG_ADMIN	ADMIN	CMP-101	New Complaint Arrived	Complaint CMP-2026-000101 (Water & Plumbing) submitted by Persistence Test User.	1788251193841	false
+NTF-5003	TEST-CUST-999	CUSTOMER	CMP-101	Status Updated	Your complaint CMP-2026-000101 status is now In Progress.	1788251193853	false
+NTF-5001	TEST-CUST-999	CUSTOMER	CMP-101	Complaint Submitted	Your complaint CMP-2026-000101 has been registered successfully.	1788320458728	false
+NTF-5002	ORG_ADMIN	ADMIN	CMP-101	New Complaint Arrived	Complaint CMP-2026-000101 (Water & Plumbing) submitted by Persistence Test User.	1788320458747	false
+NTF-5003	TEST-CUST-999	CUSTOMER	CMP-101	Status Updated	Your complaint CMP-2026-000101 status is now In Progress.	1788320458771	false
+NTF-5001	TEST-CUST-999	CUSTOMER	CMP-101	Complaint Assigned	Your complaint CMP-2026-000101 has been assigned to Walter White.	1788320819733	false
+NTF-5002	STF-103	STAFF	CMP-101	New Assignment	Complaint CMP-2026-000101 has been assigned to you.	1788320819744	false
+NTF-5001	TEST-CUST-999	CUSTOMER	CMP-101	Complaint Submitted	Your complaint CMP-2026-000101 has been registered successfully.	1788322705092	false
+NTF-5002	ORG_ADMIN	ADMIN	CMP-101	New Complaint Arrived	Complaint CMP-2026-000101 (Water & Plumbing) submitted by Persistence Test User.	1788322705108	false
+NTF-5003	TEST-CUST-999	CUSTOMER	CMP-101	Status Updated	Your complaint CMP-2026-000101 status is now In Progress.	1788322705121	false

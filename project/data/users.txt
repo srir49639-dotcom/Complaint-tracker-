@@ -1,0 +1,6 @@
+#UserID	Name	Email	Phone	Role	Department
+USR-201	Aarav Sharma	aarav.s@student.edu	9900011101	STUDENT	Computer Science
+USR-202	Ananya Verma	ananya.v@student.edu	9900011102	STUDENT	Electrical Engineering
+USR-203	Rohan Mehta	rohan.m@student.edu	9900011103	STUDENT	Mechanical Engineering
+USR-204	Dr. S. K. Roy	sk.roy@faculty.edu	9900011104	FACULTY	Physics Dept
+USR-205	Sneha Kulkarni	sneha.k@student.edu	9900011105	STUDENT	Civil Engineering
