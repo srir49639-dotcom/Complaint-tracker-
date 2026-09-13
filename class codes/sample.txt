@@ -1,3 +1,0 @@
-Hello, this is a sample text file.
-This file is used to demonstrate reading from a file in Java.
-Each line will be printed to the console.
